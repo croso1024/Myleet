@@ -1,0 +1,29 @@
+class Solution:
+    def search(self, nums: list, target: int) -> int:
+        self.l_probe = 0 
+        self.r_probe = len(nums) - 1 
+        self.size = len(nums) - 1
+        if nums[self.l_probe] == target : return self.l_probe
+        if nums[self.r_probe] == target : return self.r_probe 
+        
+        if target > nums[self.r_probe]: 
+            
+            while self.l_probe<self.size and  nums[self.l_probe] <= target: 
+                if nums[self.l_probe] == target: return self.l_probe 
+                else: self.l_probe += 1 
+                    
+            return -1
+        
+        else : 
+            
+            while self.r_probe > 0 and nums[self.r_probe] >= target: 
+                if nums[self.r_probe] == target : return self.r_probe        
+                else: self.r_probe -= 1 
+            return -1 
+
+
+
+
+test = [4,5,6,7,0,1,2]
+S = Solution() 
+print(S.search(test,0))
