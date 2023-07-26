@@ -1,0 +1,31 @@
+class Solution:
+    def countTime(self, time: str) -> int:
+        sol = 0 
+        if time.count("?") == 1 : 
+            pos = time.index("?") 
+       
+            for i in range(10):  
+                tmp = time[:pos] + str(i) +time[pos+1:]
+                timeTuple = tmp.split(":") 
+                
+                if self.vaildCheck( timeTuple ) : 
+                    sol+=1 
+        
+        elif time.count("?") == 0 : 
+            return 1
+        else: 
+            pos_first = time.index("?")
+            pos_second = time[pos_first+1:].index("?") + pos_first + 1 
+            
+            for i in range(10): 
+                tmp = time[:pos_first] + str(i) + time[pos_first+1:] 
+                sol += self.countTime(tmp)
+        
+        
+        return sol 
+    
+    def vaildCheck(self,timeTuple) -> bool : 
+        return True if int(timeTuple[0]) <24 and int(timeTuple[1])<60   else False 
+    
+C = Solution() 
+print(C.countTime("21:08"))
