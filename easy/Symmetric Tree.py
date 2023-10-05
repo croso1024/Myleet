@@ -70,7 +70,16 @@ class Solution:
         
         # 檢查一下,如果本就只有一個節點就是True 
         if root.left is None and root.right is None  : return True  
-        if not root.left or not root.right : return False 
+        # 只有其中一個沒有就是False
+        elif not root.left or not root.right : return False 
+
+        # 先翻轉其中左邊的樹 
+        inverseLeft = inverseTree(root.left) 
+        
+        # 比較是否相同 
+        return sameTree(inverseLeft , root.right)            
+            
+            
         
         
         

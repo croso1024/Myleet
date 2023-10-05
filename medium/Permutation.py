@@ -38,5 +38,4 @@ class Solution:
             
 
         backtrack(nums , [])
-        print(result)
         return result 
