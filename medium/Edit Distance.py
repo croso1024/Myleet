@@ -197,4 +197,8 @@ class Solution:
                         dp[i][j-1] 
                     )
         
-        return dp[len(word1)][len(word2)]
+        return dp[len(word1)][len(word2)] 
+
+
+S = Solution()
+print(S.minDistance("video" , "record"))
