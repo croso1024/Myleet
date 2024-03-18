@@ -34,9 +34,7 @@ var zeroFilledSubarray = function(nums) {
             sol +=  (n*(n+1)) / 2 
 
         }
-
         right += 1 
-
     }
     return sol 
 };
