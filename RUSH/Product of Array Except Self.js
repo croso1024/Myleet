@@ -48,8 +48,5 @@ var productExceptSelf = function(nums) {
         temp *= nums[i] ; 
     }
 
-
-
-
-
+    return answer ; 
 };

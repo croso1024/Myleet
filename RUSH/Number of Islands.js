@@ -21,7 +21,6 @@ var numIslands = function(grid) {
                     grid[next_x][next_y] = "0" ; 
                     dfs(next_x , next_y) ; 
                 }
-
             }
         }
     }
