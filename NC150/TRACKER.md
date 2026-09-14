@@ -54,8 +54,8 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| — | `ContainsDuplicate_217` | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | 🟩 Easy | `easy/Contains Duplicate.js` | ☐ | ☐ | ☐ | ☐ |
-| — | `ValidAnagram_242` | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | 🟩 Easy | `easy/ValidAnagram.py` +1 | ☐ | ☐ | ☐ | ☐ |
+| — | `ContainsDuplicate_217` | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | 🟩 Easy | `easy/Contains Duplicate.js` | ☑ | ☐ | ☐ | ☐ |
+| — | `ValidAnagram_242` | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | 🟩 Easy | `easy/ValidAnagram.py` +1 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `TwoSum_1` | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟩 Easy | `easy/Two Sum.py` +1 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `GroupAnagrams_49` | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | 🟨 Med | `medium/GroupAnagrams.py` +2 | ☐ | ☐ | ☐ | ☐ |
 | — | `TopKFrequentElements_347` | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | 🟨 Med | `medium/Top K Frequent Elements.py`📝 | ☐ | ☐ | ☐ | ☐ |
@@ -70,8 +70,8 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| — | `ValidPalindrome_125` | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 🟩 Easy | `easy/Valid Palindrome.js`📝 +3 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `TwoSumIIInputArrayIsSorted_167` | [Two Sum II Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | 🟨 Med | `medium/Two Sum II - Input Array Is Sorted.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
+| — | `ValidPalindrome_125` | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 🟩 Easy | `easy/Valid Palindrome.js`📝 +3 | ☑ | ☐ | ☐ | ☐ |
+| **P0** | `TwoSumIIInputArrayIsSorted_167` | [Two Sum II Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | 🟨 Med | `medium/Two Sum II - Input Array Is Sorted.py`📝 +1 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `ThreeSum_15` | [3Sum](https://leetcode.com/problems/3sum/) | 🟨 Med | `medium/3Sum.js`📝 +4 | ☐ | ☐ | ☐ | ☐ |
 | — | `ContainerWithMostWater_11` | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | 🟨 Med | `TOP150Review/Container With Most Water.py` +2 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `TrappingRainWater_42` | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 🟥 Hard | `hard/Trapping Rain Water.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
@@ -82,7 +82,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| — | `BestTimeToBuyAndSellStock_121` | [Best Time to Buy And Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 🟩 Easy | `easy/Best_Time_to_Buy_and_Sell_Stock.py` +3 | ☐ | ☐ | ☐ | ☐ |
+| — | `BestTimeToBuyAndSellStock_121` | [Best Time to Buy And Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 🟩 Easy | `easy/Best_Time_to_Buy_and_Sell_Stock.py` +3 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `LongestSubstringWithoutRepeatingCharacters_3` | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 🟨 Med | `medium/Longest Substring Without Repeating Characters.js`📝 +3 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `LongestRepeatingCharacterReplacement_424` | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | 🟨 Med | `medium/Longest Repeating Character Replacement.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | — | `PermutationInString_567` | [Permutation In String](https://leetcode.com/problems/permutation-in-string/) | 🟨 Med | `medium/Permutation in String.js`📝 | ☐ | ☐ | ☐ | ☐ |
