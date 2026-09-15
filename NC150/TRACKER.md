@@ -56,8 +56,8 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | — | `ContainsDuplicate_217` | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | 🟩 Easy | `easy/Contains Duplicate.js` | ☑ | ☐ | ☐ | ☐ |
 | — | `ValidAnagram_242` | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | 🟩 Easy | `easy/ValidAnagram.py` +1 | ☑ | ☐ | ☐ | ☐ |
-| **P0** | `TwoSum_1` | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟩 Easy | `easy/Two Sum.py` +1 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `GroupAnagrams_49` | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | 🟨 Med | `medium/GroupAnagrams.py` +2 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `TwoSum_1` | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟩 Easy | `easy/Two Sum.py` +1 | ☑ | ☐ | ☐ | ☐ |
+| **P0** | `GroupAnagrams_49` | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | 🟨 Med | `medium/GroupAnagrams.py` +2 | ☑ | ☐ | ☐ | ☐ |
 | — | `TopKFrequentElements_347` | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | 🟨 Med | `medium/Top K Frequent Elements.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `EncodeAndDecodeStrings_271` | [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `ProductOfArrayExceptSelf_238` | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | 🟨 Med | `medium/Product_of_Array_Except_Self.py` +1 | ☐ | ☐ | ☐ | ☐ |
