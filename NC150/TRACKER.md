@@ -58,11 +58,11 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `ValidAnagram_242` | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | 🟩 Easy | `easy/ValidAnagram.py` +1 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `TwoSum_1` | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟩 Easy | `easy/Two Sum.py` +1 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `GroupAnagrams_49` | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | 🟨 Med | `medium/GroupAnagrams.py` +2 | ☑ | ☐ | ☐ | ☐ |
-| — | `TopKFrequentElements_347` | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | 🟨 Med | `medium/Top K Frequent Elements.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `TopKFrequentElements_347` | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | 🟨 Med | `medium/Top K Frequent Elements.py`📝 | ☑ | ☐ | ☐ | ☐ |
 | P1 | `EncodeAndDecodeStrings_271` | [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `ProductOfArrayExceptSelf_238` | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | 🟨 Med | `medium/Product_of_Array_Except_Self.py` +1 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `ProductOfArrayExceptSelf_238` | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | 🟨 Med | `medium/Product_of_Array_Except_Self.py` +1 | ☑ | ☐ | ☐ | ☑ |
 | — | `ValidSudoku_36` | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | 🟨 Med | `medium/Valid_Sudoku.py` +2 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `LongestConsecutiveSequence_128` | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | 🟨 Med | `medium/Longest Consecutive Sequence.js` +1 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `LongestConsecutiveSequence_128` | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | 🟨 Med | `medium/Longest Consecutive Sequence.js` +1 | ☑ | ☐ | ☐ | ☑ |
 
 ## 2. Two Pointers · 5 題 · W1
 
@@ -72,8 +72,8 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | — | `ValidPalindrome_125` | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 🟩 Easy | `easy/Valid Palindrome.js`📝 +3 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `TwoSumIIInputArrayIsSorted_167` | [Two Sum II Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | 🟨 Med | `medium/Two Sum II - Input Array Is Sorted.py`📝 +1 | ☑ | ☐ | ☐ | ☐ |
-| **P0** | `ThreeSum_15` | [3Sum](https://leetcode.com/problems/3sum/) | 🟨 Med | `medium/3Sum.js`📝 +4 | ☐ | ☐ | ☐ | ☐ |
-| — | `ContainerWithMostWater_11` | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | 🟨 Med | `TOP150Review/Container With Most Water.py` +2 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `ThreeSum_15` | [3Sum](https://leetcode.com/problems/3sum/) | 🟨 Med | `medium/3Sum.js`📝 +4 | ☑ | ☐ | ☐ | ☑ |
+| — | `ContainerWithMostWater_11` | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | 🟨 Med | `TOP150Review/Container With Most Water.py` +2 | ☑ | ☐ | ☐ | ☐ |
 | P1 | `TrappingRainWater_42` | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 🟥 Hard | `hard/Trapping Rain Water.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 
 ## 3. Sliding Window · 6 題 · W1
