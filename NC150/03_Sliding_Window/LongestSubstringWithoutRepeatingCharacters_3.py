@@ -8,6 +8,13 @@
 
     思路 :
 
+    這題要找長度,我預期是Sliding Windows去維護一個目前兩指標之間的窗口.
+    每次移動前,確認新目標是否在窗口內,是的話就要縮小窗口. 
+    確保每次動完窗口內都是不重複字元,再接 evaluate
+    此解法時間複雜度O(N) , 空間O(N)
+
+
+
     複雜度 : Time O(?) / Space O(?)
 
     Trade-off :
@@ -17,7 +24,52 @@
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        pass
+
+        left = 0 
+        right = 0 
+        window = set()
+        longest_substring_size = 0 
+
+        while left < len(s) : 
+
+            while right < len(s) and  s[right] not in window : 
+                 
+                window.add(s[right])
+                right += 1 
+
+            longest_substring_size = max(longest_substring_size , len(window)) 
+            
+            if right == len(s) : 
+                break 
+            
+            while left < len(s)  and s[right] in window : 
+                window.remove(s[left]) 
+                left += 1 
+
+        return longest_substring_size 
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+
+        left , right = 0 , 0 
+        window = set() 
+        answer = 0 
+
+        while right < len(s) :
+
+            if s[right] not in window : 
+                window.add(s[right]) 
+                right += 1 
+            else :
+                while s[right] in window : 
+                    window.remove(s[left]) 
+                    left += 1 
+            
+            answer = max(answer , len(window)) 
+        
+        return answer
+
+
 
 
 if __name__ == "__main__":
