@@ -74,7 +74,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | **P0** | `TwoSumIIInputArrayIsSorted_167` | [Two Sum II Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | 🟨 Med | `medium/Two Sum II - Input Array Is Sorted.py`📝 +1 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `ThreeSum_15` | [3Sum](https://leetcode.com/problems/3sum/) | 🟨 Med | `medium/3Sum.js`📝 +4 | ☑ | ☐ | ☐ | ☑ |
 | — | `ContainerWithMostWater_11` | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | 🟨 Med | `TOP150Review/Container With Most Water.py` +2 | ☑ | ☐ | ☐ | ☐ |
-| P1 | `TrappingRainWater_42` | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 🟥 Hard | `hard/Trapping Rain Water.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
+| P1 | `TrappingRainWater_42` | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 🟥 Hard | `hard/Trapping Rain Water.py`📝 +1 | ☑ | ☐ | ☐ | ☐ |
 
 ## 3. Sliding Window · 6 題 · W1
 
@@ -83,11 +83,11 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | — | `BestTimeToBuyAndSellStock_121` | [Best Time to Buy And Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 🟩 Easy | `easy/Best_Time_to_Buy_and_Sell_Stock.py` +3 | ☑ | ☐ | ☐ | ☐ |
-| **P0** | `LongestSubstringWithoutRepeatingCharacters_3` | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 🟨 Med | `medium/Longest Substring Without Repeating Characters.js`📝 +3 | ☐ | ☐ | ☐ | ☐ |
-| P1 | `LongestRepeatingCharacterReplacement_424` | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | 🟨 Med | `medium/Longest Repeating Character Replacement.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
-| — | `PermutationInString_567` | [Permutation In String](https://leetcode.com/problems/permutation-in-string/) | 🟨 Med | `medium/Permutation in String.js`📝 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `MinimumWindowSubstring_76` | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | 🟥 Hard | `hard/Minimum Window Substring.js`📝 +1 | ☐ | ☐ | ☐ | ☐ |
-| P1 | `SlidingWindowMaximum_239` | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `LongestSubstringWithoutRepeatingCharacters_3` | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 🟨 Med | `medium/Longest Substring Without Repeating Characters.js`📝 +3 | ☑ | ☐ | ☐ | ☐ |
+| P1 | `LongestRepeatingCharacterReplacement_424` | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | 🟨 Med | `medium/Longest Repeating Character Replacement.py`📝 +1 | ☑ | ☐ | ☐ | ☐ |
+| — | `PermutationInString_567` | [Permutation In String](https://leetcode.com/problems/permutation-in-string/) | 🟨 Med | `medium/Permutation in String.js`📝 | ☑ | ☐ | ☐ | ☐ |
+| **P0** | `MinimumWindowSubstring_76` | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | 🟥 Hard | `hard/Minimum Window Substring.js`📝 +1 | ☑ | ☐ | ☐ | ☐ |
+| P1 | `SlidingWindowMaximum_239` | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | 🟥 Hard | — | ☑ | ☐ | ☐ | ☐ |
 
 ## 4. Stack · 6 題 · W2
 
@@ -95,12 +95,12 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| **P0** | `ValidParentheses_20` | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 🟩 Easy | `easy/Valid_Parentheses.py` +2 | ☐ | ☐ | ☐ | ☐ |
-| P1 | `MinStack_155` | [Min Stack](https://leetcode.com/problems/min-stack/) | 🟨 Med | `medium/Min Stack.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
-| — | `EvaluateReversePolishNotation_150` | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | 🟨 Med | `medium/Evaluate Reverse Polish Notation.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `DailyTemperatures_739` | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | 🟨 Med | `medium/Daily Temperatures.js`📝 +1 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `ValidParentheses_20` | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 🟩 Easy | `easy/Valid_Parentheses.py` +2 | ☑ | ☐ | ☐ | ☐ |
+| P1 | `MinStack_155` | [Min Stack](https://leetcode.com/problems/min-stack/) | 🟨 Med | `medium/Min Stack.py`📝 +1 | ☑ | ☐ | ☐ | ☐ |
+| — | `EvaluateReversePolishNotation_150` | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | 🟨 Med | `medium/Evaluate Reverse Polish Notation.py`📝 +1 | ☑ | ☐ | ☐ | ☐ |
+| **P0** | `DailyTemperatures_739` | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | 🟨 Med | `medium/Daily Temperatures.js`📝 +1 | ☑ | ☐ | ☐ | ☐ |
 | — | `CarFleet_853` | [Car Fleet](https://leetcode.com/problems/car-fleet/) | 🟨 Med | `medium/Car Fleet.js`📝 | ☐ | ☐ | ☐ | ☐ |
-| P1 | `LargestRectangleInHistogram_84` | [Largest Rectangle In Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
+| P1 | `LargestRectangleInHistogram_84` | [Largest Rectangle In Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | 🟥 Hard | — | ☑ | ☐ | ☐ | ☐ |
 
 ## 5. Binary Search · 7 題 · W2
 
@@ -108,9 +108,9 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| **P0** | `BinarySearch_704` | [Binary Search](https://leetcode.com/problems/binary-search/) | 🟩 Easy | `easy/Binary Search.py` | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `BinarySearch_704` | [Binary Search](https://leetcode.com/problems/binary-search/) | 🟩 Easy | `easy/Binary Search.py` | ☑ | ☐ | ☐ | ☐ |
 | — | `SearchA2DMatrix_74` | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | 🟨 Med | `medium/Search a 2D Matrix.py`📝 +3 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `KokoEatingBananas_875` | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | 🟨 Med | `medium/Koko Eating Bananas.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `KokoEatingBananas_875` | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | 🟨 Med | `medium/Koko Eating Bananas.py`📝 | ☑ | ☐ | ☐ | ☐ |
 | — | `FindMinimumInRotatedSortedArray_153` | [Find Minimum In Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | 🟨 Med | `medium/Find Minimum in Rotated Sorted Array.js`📝 +2 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `SearchInRotatedSortedArray_33` | [Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | 🟨 Med | `RUSH/Search in Rotated Sorted Array.py` | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `TimeBasedKeyValueStore_981` | [Time Based Key Value Store](https://leetcode.com/problems/time-based-key-value-store/) | 🟨 Med | `medium/Time Based Key-Value Store.py`📝 | ☐ | ☐ | ☐ | ☐ |
