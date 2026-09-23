@@ -32,6 +32,16 @@
 
     思路 :
 
+    稍微思考了一下，我認為核心想法是慢車若一開始較靠近終點，就一定會卡住快車但遠離終點的.
+    所以,先基於距離終點的位置做一次 Sorting (將初位置,速度作為Item) , 就可以得到距離終點由遠到近的車輛.
+    從最遠的車輛開始. 若最遠的車輛快過下一台,他們就會成為一個團體.
+    因此先排序後 , 開始逐一檢查: 
+    TC : O(NlogN) , SC : O(N)
+
+    這一題還能稍微優化的話, 應該是不用完整維護一個stack ,因為我永遠只用stack尾端來做比較.
+    還有一開始的排序,距離終點的時間來排序應該也行
+
+
     複雜度 : Time O(?) / Space O(?)
 
     Trade-off :
@@ -39,12 +49,71 @@
 """
 
 from typing import List
+from math import ceil
 
+class Group : 
 
+  def __init__(self,pos :int, velocity:int): 
+    self.pos = pos 
+    self.velocity = velocity
 class Solution:
     def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
-        pass
 
+      # List[Group]
+      stack : List[Group] = []
+
+      size = len(position)
+      # 先依照距離終點的位置,還有速度做Sort
+      # 排序 , 先按照距離終點位置. 由離終點近的到遠 , 相同位置則速度由大到小
+      sorted_fleet_data = [( position[i] , speed[i]  ) for i in range(size)]
+      sorted_fleet_data.sort(key = lambda x : ( target-x[0] , -1*x[1] ) ) 
+      
+      for i in range(size):
+
+        car_data = sorted_fleet_data[i] 
+
+        if not stack : 
+          stack.append( Group( pos = car_data[0] , velocity=car_data[1] )) 
+        
+        else : 
+          # 位置一定 >= 當前 
+
+          # 若前一個 Group 到終點的步數 >= 當前這台車到終點的步數 => 合併
+          if  ((target - stack[-1].pos) / stack[-1].velocity) >= ( (target - car_data[0]) / car_data[1] ) : 
+            pass
+          # 若否 , 則新增一個 Group , 這個 Group 最慢. stack頂端維持最慢Group
+          else : 
+            stack.append( Group(pos = car_data[0] , velocity= car_data[1]))
+        
+      return len(stack)
+
+        
+  
+class Solution:
+    def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
+
+      group_count : int = 0 
+      current_time = None
+      pos_and_time = [ ( position[i] ,  (target-position[i])/speed[i]  )  for i in range(len(position)) ]  
+      # 由離終點最近的開始
+      pos_and_time.sort(key=lambda x : target-x[0] ) 
+
+      for _ , time in pos_and_time: 
+
+        if current_time is None : 
+          group_count += 1 
+          current_time = time 
+        
+        else: 
+
+          # 若前一個元素要到達需要的時間小於當前這個Group , 那就需要新增一個Group , 
+          if current_time < time : 
+            group_count += 1 
+            current_time = time 
+          else : 
+            pass 
+      
+      return group_count
 
 if __name__ == "__main__":
     c = Solution()
@@ -61,6 +130,9 @@ if __name__ == "__main__":
         ((1000000, [0], [1]), 1),                           # 邊界:單台車 + 大 target
         ((10, [9], [1]), 1),                                # 邊界:起點緊貼終點
         ((10, [0, 1], [1, 10]), 2),                         # 前車較快,差距持續拉開
+        ((10, [6,8], [3,2]), 2),                                
+        ((10, [8,3,7,4,6,5], [4,4,4,4,4,4]), 6),                                
+        
     ]
 
     for args, expected in test_set:

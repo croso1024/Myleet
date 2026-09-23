@@ -23,6 +23,16 @@
 
     思路 :
 
+    很標準的2D Binary Search. 
+    每一列都是非遞減排序, 
+    第二列任何元素都大於下一列元素. ( 不是大於等於 , 是大於 ) 
+    現在要問 , 給訂一個整數 , 確認這個整數是否在這個2D陣列中. 
+
+    把列攤開來可能像是 : 
+    [(a_1,...,a_n) , (b_1,...,b_n) , (c_1,...c_n) ] , 其中  b_1 > a_n , c_1 > b_n 
+    第一個 Binary Search用來找到是否有落盤在這些區間. 若沒有可以直接回False , 有就往下找 O(LogM)
+    第二個 Binary Search用來找是否在區間內
+
     複雜度 : Time O(?) / Space O(?)
 
     Trade-off :
@@ -34,7 +44,44 @@ from typing import List
 
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        pass
+
+        m , n = len(matrix) , len(matrix[0]) 
+
+        # First diemension 
+        left , right = 0 , m - 1 
+
+        while left <= right : 
+
+            mid = (right+left)//2 
+
+            row = matrix[mid] 
+
+            if row[0] == target or row[-1] == target : return True 
+            # 進入第二層的Binary Search, 這裡找不到就是無解 
+            elif row[0] < target < row[-1] : 
+
+                inner_left , inner_right = 0 , n-1 
+                
+                while inner_left <= inner_right : 
+
+                    inner_mid = (inner_right+inner_left)//2 
+                    value = row[inner_mid] 
+
+                    if value == target : return True 
+                    elif value > target : inner_right = inner_mid - 1 
+                    elif value < target : inner_left = inner_mid + 1 
+                
+                return False 
+
+            # 若此列第一個元素 > target , 代表 target 在更上的Row 
+            elif row[0] > target : 
+                right = mid - 1 
+            # 若 target大於此列最後一個元素 , 代表 target 在更往下的 Row 
+            elif row[-1] < target : 
+                left = mid + 1 
+        
+        return False 
+
 
 
 if __name__ == "__main__":

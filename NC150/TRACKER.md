@@ -99,7 +99,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | P1 | `MinStack_155` | [Min Stack](https://leetcode.com/problems/min-stack/) | 🟨 Med | `medium/Min Stack.py`📝 +1 | ☑ | ☐ | ☐ | ☐ |
 | — | `EvaluateReversePolishNotation_150` | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | 🟨 Med | `medium/Evaluate Reverse Polish Notation.py`📝 +1 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `DailyTemperatures_739` | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | 🟨 Med | `medium/Daily Temperatures.js`📝 +1 | ☑ | ☐ | ☐ | ☐ |
-| — | `CarFleet_853` | [Car Fleet](https://leetcode.com/problems/car-fleet/) | 🟨 Med | `medium/Car Fleet.js`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `CarFleet_853` | [Car Fleet](https://leetcode.com/problems/car-fleet/) | 🟨 Med | `medium/Car Fleet.js`📝 | ☑ | ☐ | ☐ | ☐ |
 | P1 | `LargestRectangleInHistogram_84` | [Largest Rectangle In Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | 🟥 Hard | — | ☑ | ☐ | ☐ | ☐ |
 
 ## 5. Binary Search · 7 題 · W2
@@ -109,11 +109,11 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | **P0** | `BinarySearch_704` | [Binary Search](https://leetcode.com/problems/binary-search/) | 🟩 Easy | `easy/Binary Search.py` | ☑ | ☐ | ☐ | ☐ |
-| — | `SearchA2DMatrix_74` | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | 🟨 Med | `medium/Search a 2D Matrix.py`📝 +3 | ☐ | ☐ | ☐ | ☐ |
+| — | `SearchA2DMatrix_74` | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | 🟨 Med | `medium/Search a 2D Matrix.py`📝 +3 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `KokoEatingBananas_875` | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | 🟨 Med | `medium/Koko Eating Bananas.py`📝 | ☑ | ☐ | ☐ | ☐ |
-| — | `FindMinimumInRotatedSortedArray_153` | [Find Minimum In Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | 🟨 Med | `medium/Find Minimum in Rotated Sorted Array.js`📝 +2 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `SearchInRotatedSortedArray_33` | [Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | 🟨 Med | `RUSH/Search in Rotated Sorted Array.py` | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `TimeBasedKeyValueStore_981` | [Time Based Key Value Store](https://leetcode.com/problems/time-based-key-value-store/) | 🟨 Med | `medium/Time Based Key-Value Store.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `FindMinimumInRotatedSortedArray_153` | [Find Minimum In Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | 🟨 Med | `medium/Find Minimum in Rotated Sorted Array.js`📝 +2 | ☑ | ☐ | ☐ | ☐ |
+| **P0** | `SearchInRotatedSortedArray_33` | [Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | 🟨 Med | `RUSH/Search in Rotated Sorted Array.py` | ☑ | ☐ | ☐ | ☐ |
+| **P0** | `TimeBasedKeyValueStore_981` | [Time Based Key Value Store](https://leetcode.com/problems/time-based-key-value-store/) | 🟨 Med | `medium/Time Based Key-Value Store.py`📝 | ☑ | ☐ | ☐ | ☐ |
 | — | `MedianOfTwoSortedArrays_4` | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | 🟥 Hard | `hard/Median of Two Sorted Arrays.py`📝 | ☐ | ☐ | ☐ | ☐ |
 
 ## 6. Linked List · 11 題 · W2
@@ -122,13 +122,13 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| **P0** | `ReverseLinkedList_206` | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | 🟩 Easy | `easy/Reverse Linked List.py` +2 | ☐ | ☐ | ☐ | ☐ |
-| — | `MergeTwoSortedLists_21` | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | 🟩 Easy | `TOP150Review/Merge Two Sorted Lists.py` +2 | ☐ | ☐ | ☐ | ☐ |
-| — | `LinkedListCycle_141` | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | 🟩 Easy | `easy/Linked List Cycle.py` +2 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `ReorderList_143` | [Reorder List](https://leetcode.com/problems/reorder-list/) | 🟨 Med | `medium/Reorder List.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `ReverseLinkedList_206` | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | 🟩 Easy | `easy/Reverse Linked List.py` +2 | ☑ | ☐ | ☐ | ☐ |
+| — | `MergeTwoSortedLists_21` | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | 🟩 Easy | `TOP150Review/Merge Two Sorted Lists.py` +2 | ☑ | ☐ | ☐ | ☐ |
+| — | `LinkedListCycle_141` | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | 🟩 Easy | `easy/Linked List Cycle.py` +2 | ☑ | ☐ | ☐ | ☑ |
+| **P0** | `ReorderList_143` | [Reorder List](https://leetcode.com/problems/reorder-list/) | 🟨 Med | `medium/Reorder List.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `RemoveNthNodeFromEndOfList_19` | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | 🟨 Med | `medium/Remove_Nth_Node_From_End_of_List.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `CopyListWithRandomPointer_138` | [Copy List With Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | 🟨 Med | `medium/Copy List with Random Pointer.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |
-| — | `AddTwoNumbers_2` | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | 🟨 Med | `medium/Add Two Numbers.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
+| — | `AddTwoNumbers_2` | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | 🟨 Med | `medium/Add Two Numbers.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `FindTheDuplicateNumber_287` | [Find The Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | 🟨 Med | `medium/Find the Duplicate Number.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `LRUCache_146` | [LRU Cache](https://leetcode.com/problems/lru-cache/) | 🟨 Med | `medium/LRU Cache.py` +1 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `MergeKSortedLists_23` | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | 🟥 Hard | `hard/Merge k Sorted Lists.py` | ☐ | ☐ | ☐ | ☐ |
@@ -141,13 +141,13 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | — | `InvertBinaryTree_226` | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | 🟩 Easy | `easy/Invert Binary Tree.py` +3 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `MaximumDepthOfBinaryTree_104` | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | 🟩 Easy | `easy/MaximumDepth_of_BinaryTree.py` +2 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `MaximumDepthOfBinaryTree_104` | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | 🟩 Easy | `easy/MaximumDepth_of_BinaryTree.py` +2 | ☑ | ☐ | ☐ | ☐ |
 | — | `DiameterOfBinaryTree_543` | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | 🟩 Easy | `easy/Diameter of Binary Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `BalancedBinaryTree_110` | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | 🟩 Easy | `easy/Balanced Binary Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `SameTree_100` | [Same Tree](https://leetcode.com/problems/same-tree/) | 🟩 Easy | `easy/Same Tree.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | — | `SubtreeOfAnotherTree_572` | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | 🟩 Easy | `easy/Subtree of Another Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `LowestCommonAncestorOfABinarySearchTree_235` | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | 🟨 Med | `medium/Lowest Common Ancestor of a Binary Search Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `BinaryTreeLevelOrderTraversal_102` | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | 🟨 Med | `medium/Binary Tree Level Order Traversal.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `BinaryTreeLevelOrderTraversal_102` | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | 🟨 Med | `medium/Binary Tree Level Order Traversal.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `BinaryTreeRightSideView_199` | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | 🟨 Med | `medium/Binary Tree Right Side View.py` +1 | ☐ | ☐ | ☐ | ☐ |
 | — | `CountGoodNodesInBinaryTree_1448` | [Count Good Nodes In Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | 🟨 Med | `medium/Count Good Nodes in Binary Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `ValidateBinarySearchTree_98` | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | 🟨 Med | `medium/Validate Binary Search Tree.py`📝 +3 | ☐ | ☐ | ☐ | ☐ |

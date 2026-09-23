@@ -27,8 +27,16 @@
     nums 為升序排列後旋轉 1 到 n 次的結果
 
     思路 :
+    最小值應該出現在斷點後第一格. 或著根本沒有斷點. 
+    而如果最後一個元素 > 第一個元素 , 代表相當於完全沒有轉.
+
+    至於搜尋的迭代 , 找出當前位置的 mid 後 , 實際解答應該在哪一塊!? 
+    => 檢查和 mid 值差距較大的指標 ,那塊才應該有斷點. 
+    
+
 
     複雜度 : Time O(?) / Space O(?)
+    時間複雜度為 O(logN), 空間複雜度O(1)
 
     Trade-off :
 
@@ -39,7 +47,40 @@ from typing import List
 
 class Solution:
     def findMin(self, nums: List[int]) -> int:
-        pass
+        
+
+        left = 0 
+        right = len(nums) - 1 
+        # Binary Search 
+        while right >= left : 
+
+            left_value = nums[left]
+            right_value = nums[right]
+
+            if right_value > left_value : return left_value 
+
+            mid = ( right + left ) // 2 
+            mid_value = nums[mid]
+
+            # 比較mid value和左/右指標的數值差距誰大. 
+            diff_with_right = abs( right_value - mid_value ) 
+            diff_with_left = abs( left_value - mid_value ) 
+
+            # 若 mid 和右指標差值大 , 則斷點在 mid ~ 右指標之間 
+            if diff_with_right > diff_with_left : 
+                # 核心關鍵 ,  mid 和右邊差距較大的情況 , left 可以多走一格,因為最小值一定在其右側範圍
+                left  = mid + 1 
+            
+            # 若 mid 和左指標差值大 , 則斷點在 左指標 ~ mid 之間  
+            elif diff_with_right < diff_with_left: 
+                # 這裡不收一步 , 因為 mid 仍然有可能是最小值
+                right = mid 
+            # 差值一樣表示收斂了
+            else : 
+                break 
+        
+        return nums[left]
+            
 
 
 if __name__ == "__main__":

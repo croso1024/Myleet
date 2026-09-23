@@ -28,6 +28,11 @@
 
     思路 :
 
+    這題也需要搭配繪圖來求解. 
+    主要是需要釐清不同情境下 , 目標值會位於搜索空間的哪個位置.
+
+
+
     複雜度 : Time O(?) / Space O(?)
 
     Trade-off :
@@ -39,7 +44,53 @@ from typing import List
 
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        pass
+
+        left , right = 0 , len(nums) - 1
+
+
+        while left <= right : 
+
+            mid  = ( left + right ) // 2 
+            mid_value = nums[mid]
+
+            if mid_value == target : return mid 
+
+            # 當兩個指標所身處的搜索空間已經是單調遞增時 ,  nums[right] > nums[left] , 則此時就是普通的Binary Search 
+            if nums[left] < nums[right] : 
+
+                if mid_value < target : 
+                    left = mid + 1 
+                elif mid_value > target : 
+                    right = mid - 1 
+
+            # 已知此題所有元素都是相異 , 則 nums[left] > nums[right] 說明斷點位於搜索空間內 
+            # 在搜索空間內有斷點的情況下 , 搭配繪圖來釐清可能的狀況
+            elif nums[left] > nums[right] : 
+                # 值落在左指標到斷點這條上
+                if mid_value > target >= nums[left] :
+                    right = mid - 1 
+                elif target > mid_value >= nums[left] : 
+                    left = mid + 1 
+                
+                elif nums[right] >= mid_value > target : 
+                    right = mid - 1 
+                
+                elif nums[right] >= target > mid_value : 
+                    left = mid + 1 
+                
+                # 下面三條 , 是我第一輪忽略的. 
+                # 那就是 mid_value / target 個別在不同線段
+                elif mid_value >= nums[left] and target <= nums[right] : 
+                    left = mid + 1 
+                elif target >= nums[left] and mid_value <= nums[right] : 
+                    right = mid - 1 
+                # 最後一條則是我又錯一次才挖出, 如果不在上述六個條件中. 代表目標值可能根本不在這些線段上
+                else :
+                    return -1 
+            
+            else : return -1 
+
+        return -1 
 
 
 if __name__ == "__main__":
