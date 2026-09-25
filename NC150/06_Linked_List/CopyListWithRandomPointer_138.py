@@ -26,13 +26,18 @@
     Node.random 為 null,或指向串列中的某個節點
 
     思路 :
+    這一題的想法是，我們使用一個 HashMap 先儲存曾經看過的節點與複製品的對照. 
+    如果某個節點已經有了複製品. 那就直接使用,沒有就建立再用. 
+    這樣確保我們依據 next 節點走一輪後, 所有節點都建立過. 
+    這個方案需要 O(N)時間複雜度 , O(N) 空間間複雜度
 
-    複雜度 : Time O(?) / Space O(?)
+    複雜度 : Time O(N) , 即走訪一次整條List , Space : O(N) 每一個節點都要儲存一份複製品,但這也是產結果本來就要的. 
 
     Trade-off :
 
 """
 
+from random import random
 from typing import List, Optional
 
 
@@ -48,9 +53,41 @@ class Node:
         self.random = random
 
 
+from typing import List , Dict 
 class Solution:
     def copyRandomList(self, head: "Optional[Node]") -> "Optional[Node]":
-        pass
+        
+        if head is None : return None 
+        
+        # Store the hash or origin node , value is the replica
+        self.copy_map : Dict[int ,  Node] = {} 
+        self.copy_map[ id(head ) ] = Node(head.val) 
+
+        # copy node 
+        cur = head 
+
+        while cur : 
+
+            next_node = cur.next 
+            random_node = cur.random 
+
+            if next_node : 
+
+                if id(next_node) not in self.copy_map : 
+                    self.copy_map[id(next_node)] = Node(next_node.val ) 
+                
+                self.copy_map[id(cur)].next = self.copy_map[id(next_node)] 
+            
+            if random_node : 
+
+                if id(random_node) not in self.copy_map : 
+                    self.copy_map[id(random_node)] = Node(random_node.val) 
+                
+                self.copy_map[id(cur)].random = self.copy_map[id(random_node)] 
+            
+            cur = next_node 
+        
+        return self.copy_map[id(head)]
 
 
 def build_random_list(pairs: List[List[Optional[int]]]) -> Optional[Node]:

@@ -17,8 +17,14 @@
     1 <= n <= sz
 
     思路 :
+    這一題要處理 Linked list 的操作 , "倒數第n" 這件事應該可以透過先讓一個指標提前走n步來達成. 
+    已知  n <= sz . 
+    假設 
+    : sz = 3 , n = 3 , 則走三步後到一個 None , 
+    : sz = 3 , n = 1 , 則fast先走一步, 之後一起走到 fast為None時 , 慢標就指向要被砍的節點. 
+    為了移除要被砍的節點,我們額外維護一個 prev , 用來橋接
 
-    複雜度 : Time O(?) / Space O(?)
+    複雜度 :  Time O(N) , 只要快慢標走一次 , 加上一些橋接工作 / 空間 O(1) , 僅存指標和橋接過程的暫存
 
     Trade-off :
 
@@ -35,7 +41,30 @@ class ListNode:
 
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-        pass
+        
+        slow = head 
+        fast = head 
+        prev = None # Keep a hook 
+        
+        # Give n <= length( linked_list ) 
+        for i in range(n): fast = fast.next 
+        
+        # 只要 fast 還指向存在的節點 , 就繼續走. 
+        while fast : 
+            prev = slow 
+            slow = slow.next 
+            fast = fast.next 
+        
+        # 跳出後 , 開始橋接整個節點. 
+
+        # prev is not None : 代表要移除的不是第一個節點 , prev 有值. 後續回傳 head 即可
+        if prev is not None : 
+            prev.next = slow.next 
+            return head 
+        
+        # 若 prev is None , 則表示移除的就是倒數第 sz 個 , 也就是第一個節點. 直接回 head.next 
+        else : 
+            return head.next 
 
 
 def build_linked_list(values: List[int]) -> Optional[ListNode]:

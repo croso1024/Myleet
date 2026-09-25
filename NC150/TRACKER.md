@@ -126,11 +126,11 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `MergeTwoSortedLists_21` | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | 🟩 Easy | `TOP150Review/Merge Two Sorted Lists.py` +2 | ☑ | ☐ | ☐ | ☐ |
 | — | `LinkedListCycle_141` | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | 🟩 Easy | `easy/Linked List Cycle.py` +2 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `ReorderList_143` | [Reorder List](https://leetcode.com/problems/reorder-list/) | 🟨 Med | `medium/Reorder List.py`📝 | ☑ | ☐ | ☐ | ☑ |
-| — | `RemoveNthNodeFromEndOfList_19` | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | 🟨 Med | `medium/Remove_Nth_Node_From_End_of_List.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |
-| P1 | `CopyListWithRandomPointer_138` | [Copy List With Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | 🟨 Med | `medium/Copy List with Random Pointer.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |
+| — | `RemoveNthNodeFromEndOfList_19` | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | 🟨 Med | `medium/Remove_Nth_Node_From_End_of_List.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
+| P1 | `CopyListWithRandomPointer_138` | [Copy List With Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | 🟨 Med | `medium/Copy List with Random Pointer.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `AddTwoNumbers_2` | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | 🟨 Med | `medium/Add Two Numbers.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
-| P1 | `FindTheDuplicateNumber_287` | [Find The Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | 🟨 Med | `medium/Find the Duplicate Number.py`📝 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `LRUCache_146` | [LRU Cache](https://leetcode.com/problems/lru-cache/) | 🟨 Med | `medium/LRU Cache.py` +1 | ☐ | ☐ | ☐ | ☐ |
+| P1 | `FindTheDuplicateNumber_287` | [Find The Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | 🟨 Med | `medium/Find the Duplicate Number.py`📝 | ☑ | ☐ | ☐ | ☑ |
+| **P0** | `LRUCache_146` | [LRU Cache](https://leetcode.com/problems/lru-cache/) | 🟨 Med | `medium/LRU Cache.py` +1 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `MergeKSortedLists_23` | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | 🟥 Hard | `hard/Merge k Sorted Lists.py` | ☐ | ☐ | ☐ | ☐ |
 | — | `ReverseNodesInKGroup_25` | [Reverse Nodes In K Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
 
