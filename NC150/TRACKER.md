@@ -140,7 +140,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| — | `InvertBinaryTree_226` | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | 🟩 Easy | `easy/Invert Binary Tree.py` +3 | ☐ | ☐ | ☐ | ☐ |
+| — | `InvertBinaryTree_226` | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | 🟩 Easy | `easy/Invert Binary Tree.py` +3 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `MaximumDepthOfBinaryTree_104` | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | 🟩 Easy | `easy/MaximumDepth_of_BinaryTree.py` +2 | ☑ | ☐ | ☐ | ☐ |
 | — | `DiameterOfBinaryTree_543` | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | 🟩 Easy | `easy/Diameter of Binary Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `BalancedBinaryTree_110` | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | 🟩 Easy | `easy/Balanced Binary Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
@@ -148,7 +148,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `SubtreeOfAnotherTree_572` | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | 🟩 Easy | `easy/Subtree of Another Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `LowestCommonAncestorOfABinarySearchTree_235` | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | 🟨 Med | `medium/Lowest Common Ancestor of a Binary Search Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `BinaryTreeLevelOrderTraversal_102` | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | 🟨 Med | `medium/Binary Tree Level Order Traversal.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
-| — | `BinaryTreeRightSideView_199` | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | 🟨 Med | `medium/Binary Tree Right Side View.py` +1 | ☐ | ☐ | ☐ | ☐ |
+| — | `BinaryTreeRightSideView_199` | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | 🟨 Med | `medium/Binary Tree Right Side View.py` +1 | ☑ | ☐ | ☐ | ☑ |
 | — | `CountGoodNodesInBinaryTree_1448` | [Count Good Nodes In Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | 🟨 Med | `medium/Count Good Nodes in Binary Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `ValidateBinarySearchTree_98` | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | 🟨 Med | `medium/Validate Binary Search Tree.py`📝 +3 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `KthSmallestElementInABst_230` | [Kth Smallest Element In a Bst](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | 🟨 Med | `medium/Kth Smallest Element in a BST.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
