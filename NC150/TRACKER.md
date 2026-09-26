@@ -131,8 +131,8 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `AddTwoNumbers_2` | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | 🟨 Med | `medium/Add Two Numbers.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `FindTheDuplicateNumber_287` | [Find The Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | 🟨 Med | `medium/Find the Duplicate Number.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `LRUCache_146` | [LRU Cache](https://leetcode.com/problems/lru-cache/) | 🟨 Med | `medium/LRU Cache.py` +1 | ☑ | ☐ | ☐ | ☑ |
-| P1 | `MergeKSortedLists_23` | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | 🟥 Hard | `hard/Merge k Sorted Lists.py` | ☐ | ☐ | ☐ | ☐ |
-| — | `ReverseNodesInKGroup_25` | [Reverse Nodes In K Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
+| P1 | `MergeKSortedLists_23` | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | 🟥 Hard | `hard/Merge k Sorted Lists.py` | ☑ | ☐ | ☐ | ☑ |
+| — | `ReverseNodesInKGroup_25` | [Reverse Nodes In K Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | 🟥 Hard | — | ☑ | ☐ | ☐ | ☐ |
 
 ## 7. Trees · 15 題 · W3
 
@@ -149,10 +149,10 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `LowestCommonAncestorOfABinarySearchTree_235` | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | 🟨 Med | `medium/Lowest Common Ancestor of a Binary Search Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `BinaryTreeLevelOrderTraversal_102` | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | 🟨 Med | `medium/Binary Tree Level Order Traversal.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `BinaryTreeRightSideView_199` | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | 🟨 Med | `medium/Binary Tree Right Side View.py` +1 | ☑ | ☐ | ☐ | ☑ |
-| — | `CountGoodNodesInBinaryTree_1448` | [Count Good Nodes In Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | 🟨 Med | `medium/Count Good Nodes in Binary Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `ValidateBinarySearchTree_98` | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | 🟨 Med | `medium/Validate Binary Search Tree.py`📝 +3 | ☐ | ☐ | ☐ | ☐ |
-| P1 | `KthSmallestElementInABst_230` | [Kth Smallest Element In a Bst](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | 🟨 Med | `medium/Kth Smallest Element in a BST.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `ConstructBinaryTreeFromPreorderAndInorderTraversal_105` | [Construct Binary Tree From Preorder And Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | 🟨 Med | `medium/Construct Binary Tree from Preorder and Inorder Traversal.js`📝 +3 | ☐ | ☐ | ☐ | ☐ |
+| — | `CountGoodNodesInBinaryTree_1448` | [Count Good Nodes In Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | 🟨 Med | `medium/Count Good Nodes in Binary Tree.py`📝 | ☑ | ☐ | ☐ | ☑ |
+| **P0** | `ValidateBinarySearchTree_98` | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | 🟨 Med | `medium/Validate Binary Search Tree.py`📝 +3 | ☑ | ☐ | ☐ | ☑ |
+| P1 | `KthSmallestElementInABst_230` | [Kth Smallest Element In a Bst](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | 🟨 Med | `medium/Kth Smallest Element in a BST.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
+| **P0** | `ConstructBinaryTreeFromPreorderAndInorderTraversal_105` | [Construct Binary Tree From Preorder And Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | 🟨 Med | `medium/Construct Binary Tree from Preorder and Inorder Traversal.js`📝 +3 | ☑ | ☐ | ☐ | ☐ |
 | P1 | `BinaryTreeMaximumPathSum_124` | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | 🟥 Hard | `RUSH/Binary Tree Maximum Path Sum.js` | ☐ | ☐ | ☐ | ☐ |
 | P1 | `SerializeAndDeserializeBinaryTree_297` | [Serialize And Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
 

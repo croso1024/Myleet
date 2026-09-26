@@ -21,7 +21,31 @@
 
     思路 :
 
-    複雜度 : Time O(?) / Space O(?)
+    覺得這一題和 Merged 2 Sorted List 類似,
+    只是這一次要改為合併更多條,直覺的想法是改用某個容器儲存還能比較的Linked List即可.
+    需要有個機制去剔除已經不可比較的 Linked List 才行. 
+
+    已知 lists[i].length 總和不會超過 10^4 , 
+    如果每一次比較 , 都要比較K次. ,單條最多又500個節點.
+    可能要考量一下時間複雜度會不會爆炸.
+
+    # 此處有在思考, 題目是不是有打算要求我們用 Binary Search 快速定位要用哪條 Linked List , 但我們不能保證某條　Linked List 的頭被接上後,下一個的數值.
+    # 因此如果要走 Binary Search , 勢必還要得處理重新Sorting的機制 
+
+    # 已知總節點數在 10^4 量級 , K條數就是在 10^4 量級. 而每條最多500節點.
+    # 因此最壞的情況就是比較 10^4 條後才能選擇一個節點. 這樣思考感覺時間複雜度必定爆炸. 
+
+    思考後再想有沒有辦法用 Heap , 維護一個min_heap , 每次從 heap 頂端拿一個最小值得 Linked List 出來用.
+    用完之後更新值 , 重新丟回 Heap. 
+
+    因此實際的時間複雜度 : 
+    設 N = LinkedList數量,也是總節點數量量級
+    1. 建立 Heap , 共 10^4條 O(NlogN) 
+    2. 每一次找最小值 O(logN) ,串接O(1)
+    3. 串接完成更新回去 O(logN)  
+    看起來此方案比較合理 , 總時間複雜度應該在  O(NlogN) 
+
+    複雜度 : Time O(NlogN) / O(LlogL) , N為總節點數量,Linked List數量 / Space : O(L)
 
     Trade-off :
 
@@ -35,10 +59,53 @@ class ListNode:
         self.val = val
         self.next = next
 
+from typing import List  , Dict  , Tuple 
+from heapq import heappop , heappush
 
+class Item : 
+
+    def __init__(self, val : int , linked_list : ListNode ):
+        self.val = val 
+        self.linked_list = linked_list 
+    
+    def __eq__(self,other : ListNode):
+        return self.val == other.val
+    def __gt__(self,other: ListNode):
+        return self.val > other.val 
+    def __lt__(self,other:ListNode) : 
+        return self.val < other.val 
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        pass
+        
+        
+        # 使用 heap 來管理所有 Linked List 
+        heap : List[Item] = []
+
+        # 結構體使用 [ node_val , node ] : 
+        for list_head in lists : 
+            if list_head is None : continue
+            heappush(
+                heap , Item(val=list_head.val , linked_list=list_head)
+            )
+
+        dummy_node = ListNode() 
+        cur = dummy_node
+
+        # 只要任何一個Linked List 還有值 ( heap 存在 ) 
+        while heap : 
+
+            list_item : Item = heappop(heap)  
+            list_head = list_item.linked_list
+
+            cur.next = list_head
+            cur = cur.next 
+            list_head = list_head.next 
+
+            if list_head is not None :
+                heappush(heap , Item(val=list_head.val , linked_list=list_head))
+        
+        return dummy_node.next 
+
 
 
 def build_linked_list(values: List[int]) -> Optional[ListNode]:

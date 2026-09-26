@@ -18,7 +18,14 @@
 
     思路 :
 
-    複雜度 : Time O(?) / Space O(?)
+    一個節點稱為　Good Node, 表示從 root 到該節點X 的路上所有節點都 <= X 
+    我的想法是 , 在遞迴過程中逐步傳遞當前路上的最大值下去. 
+    
+    每一個節點在 evaluate 的時候都能拿到從 root 到目前為止的最大節點 , 以該點做比較來更新 good node 數
+
+    複雜度 :
+    - 時間複雜度 O(N)  , 每個節點走一次
+    - 空間複雜度 O(h) , Stack 儲存 Call stack 的高度
 
     Trade-off :
 
@@ -42,7 +49,27 @@ class TreeNode:
 
 class Solution:
     def goodNodes(self, root: Optional[TreeNode]) -> int:
-        pass
+        
+        counter = 0 
+
+
+        def _traverse_good_node( node : TreeNode , path_maximum : int ) : 
+
+            nonlocal counter 
+
+            if node is None : return 
+
+            if node.val >= path_maximum : counter += 1 
+
+            _traverse_good_node(node.left , path_maximum=max(path_maximum , node.val))
+            _traverse_good_node(node.right , path_maximum=max(path_maximum , node.val))
+
+            return 
+    
+        _traverse_good_node(root, path_maximum=float("-inf")) 
+
+        return counter
+
 
 
 def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:

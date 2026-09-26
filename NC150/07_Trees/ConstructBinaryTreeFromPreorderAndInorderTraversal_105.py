@@ -17,6 +17,12 @@
     preorder 與 inorder 內的值皆唯一,且彼此對應同一棵樹
 
     思路 :
+    題目給定所有節點的值唯一,因此解答才會唯一. 
+
+    從 preorder , 我們可以看出當前給定 inorder/preorder陣列的根結點 , 
+    而使用相對於 inorder 同樣數值就能區分左/右子樹. 
+    我們將左右子樹分別拆分後，送進遞迴就能繼續建構. 並將建構完成的結果拼接回到原有根
+    因此答案是走 Post-Order 遍歷來建構
 
     複雜度 : Time O(?) / Space O(?)
 
@@ -42,7 +48,29 @@ class TreeNode:
 
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
-        pass
+        
+        # Given len(preorder) == len(inorder) 
+        if len(preorder) == 0 : return None 
+        if len(preorder) == 1 : return TreeNode(val=preorder[0])
+
+        
+        # 依照 preorder 首個節點 , 確定當前子樹的Root, 再依照 inorder 當中 root 的位置去拆成左右子樹. 
+
+        root_val = preorder[0] 
+        root_index = inorder.index(root_val) 
+
+        left_sub_tree = self.buildTree( 
+            preorder=preorder[1:root_index+1] , #  size = root_index
+            inorder=inorder[:root_index] # 跳過第一個節點之後 , 數 root_index 個節點
+        )
+        right_sub_tree = self.buildTree(
+            preorder=preorder[root_index+1:] ,
+            inorder=inorder[root_index+1:]
+        )
+
+        return TreeNode(val=root_val , left = left_sub_tree , right=right_sub_tree )
+    
+        
 
 
 def tree_to_list(root: Optional[TreeNode]) -> List[Optional[int]]:

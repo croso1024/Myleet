@@ -20,16 +20,22 @@
     -2^31 <= Node.val <= 2^31 - 1
 
     思路 :
+    走遞迴 , 但需要持續保持每一輪遞迴Sub-Tree的最大值/最小值 , 供Parent node做參考. 
+    流程上走 Post-Order , 先確認左右子樹的最大/最小值範圍 , 再判斷與當前節點是否構成BST. 
+    由於我們使用了一個區域變數來儲存結果，一旦遇到了不合理值的時候，我們就不再考慮後續的Traverse是否能返回正確的每個指數的最大值、最小值。
 
-    複雜度 : Time O(?) / Space O(?)
+
+
+    複雜度 : 
+    - 時間複雜度 :所有節點走一次 O(N) ,
+    - 空間複雜度 : 每一個 Call 遞迴都要保持一組 min/max , 因此空間複雜度 O(h) , worse case下O(N)
 
     Trade-off :
 
 """
 
 from collections import deque
-from typing import List, Optional
-
+from typing import List, Optional,Tuple 
 
 class TreeNode:
     def __init__(
@@ -45,7 +51,40 @@ class TreeNode:
 
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
-        pass
+
+        is_invalid = False 
+
+        def _isBST(node:TreeNode) -> Tuple[int,int] : 
+            nonlocal is_invalid 
+
+            if is_invalid : return (None,None) 
+            if node is None : return (None , None) 
+
+            left_min , left_max = _isBST(node.left) 
+            right_min , right_max  = _isBST(node.right) 
+
+            if left_max is not None and node.val <= left_max : 
+                is_invalid = True 
+            
+            if right_min is not None and node.val >= right_min: 
+                is_invalid = True 
+
+            maximum_in_subtree = max(
+                node.val,
+                right_max if right_max is not None else float("-inf") 
+            )
+
+            minimum_in_subtree =  min(
+                node.val,
+                left_min if left_min is not None else float("inf")
+            )
+            
+            # 回傳當前子樹最大/最小值
+            return (minimum_in_subtree , maximum_in_subtree)
+    
+        _isBST(root) 
+
+        return True if not is_invalid else False 
 
 
 def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:

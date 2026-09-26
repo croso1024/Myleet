@@ -15,8 +15,12 @@
     0 <= Node.val <= 10^4
 
     思路 :
+    給定 BST , 第K小的節點 , 實際上就是第K個經過的節點. 
+    走 in-order traverse , 順便維護一個 Counter 即可. 
 
-    複雜度 : Time O(?) / Space O(?)
+    複雜度 : 
+    - 走過 N 個節點 O(N) ,
+    - 空間複雜度 : 維護一個 hook 掛著答案 , O(1)
 
     Trade-off :
 
@@ -40,7 +44,29 @@ class TreeNode:
 
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        pass
+        
+        answer = None 
+        # Tracker the k-th visited 
+        counter = 0 
+
+        def _inorder_traverse(node : TreeNode):
+
+            nonlocal counter , answer
+
+            if node is None : return None 
+
+            _inorder_traverse(node.left) 
+
+            counter += 1 
+            if counter == k : answer = node.val 
+
+            _inorder_traverse(node.right) 
+        
+        _inorder_traverse(root)
+
+        return answer
+                
+
 
 
 def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:
