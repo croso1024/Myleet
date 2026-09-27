@@ -142,8 +142,8 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | — | `InvertBinaryTree_226` | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | 🟩 Easy | `easy/Invert Binary Tree.py` +3 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `MaximumDepthOfBinaryTree_104` | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | 🟩 Easy | `easy/MaximumDepth_of_BinaryTree.py` +2 | ☑ | ☐ | ☐ | ☐ |
-| — | `DiameterOfBinaryTree_543` | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | 🟩 Easy | `easy/Diameter of Binary Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
-| — | `BalancedBinaryTree_110` | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | 🟩 Easy | `easy/Balanced Binary Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `DiameterOfBinaryTree_543` | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | 🟩 Easy | `easy/Diameter of Binary Tree.py`📝 | ☑ | ☐ | ☐ | ☑ |
+| — | `BalancedBinaryTree_110` | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | 🟩 Easy | `easy/Balanced Binary Tree.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `SameTree_100` | [Same Tree](https://leetcode.com/problems/same-tree/) | 🟩 Easy | `easy/Same Tree.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | — | `SubtreeOfAnotherTree_572` | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | 🟩 Easy | `easy/Subtree of Another Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `LowestCommonAncestorOfABinarySearchTree_235` | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | 🟨 Med | `medium/Lowest Common Ancestor of a Binary Search Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
@@ -153,7 +153,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | **P0** | `ValidateBinarySearchTree_98` | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | 🟨 Med | `medium/Validate Binary Search Tree.py`📝 +3 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `KthSmallestElementInABst_230` | [Kth Smallest Element In a Bst](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | 🟨 Med | `medium/Kth Smallest Element in a BST.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `ConstructBinaryTreeFromPreorderAndInorderTraversal_105` | [Construct Binary Tree From Preorder And Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | 🟨 Med | `medium/Construct Binary Tree from Preorder and Inorder Traversal.js`📝 +3 | ☑ | ☐ | ☐ | ☐ |
-| P1 | `BinaryTreeMaximumPathSum_124` | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | 🟥 Hard | `RUSH/Binary Tree Maximum Path Sum.js` | ☐ | ☐ | ☐ | ☐ |
+| P1 | `BinaryTreeMaximumPathSum_124` | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | 🟥 Hard | `RUSH/Binary Tree Maximum Path Sum.js` | ☑ | ☐ | ☐ | ☑ |
 | P1 | `SerializeAndDeserializeBinaryTree_297` | [Serialize And Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
 
 ## 8. Heap / Priority Queue · 7 題 · W4
@@ -323,4 +323,13 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `MissingNumber_268` | [Missing Number](https://leetcode.com/problems/missing-number/) | 🟩 Easy | `easy/Missing Number.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `SumOfTwoIntegers_371` | [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
 | — | `ReverseInteger_7` | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
+
+## Supplement · CORE_LIST 外掛 · 2 題
+
+不計入上方 150 題。檔案放在對應 pattern 目錄（`236` 在 `NC150/07_Trees/`）。
+
+| 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
+|:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
+| **P0** | `LowestCommonAncestorOfABinaryTree_236` | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | 🟨 Med | `medium/Lowest Common Ancestor of a Binary Tree.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
+| P1 | `InsertDeleteGetRandomO1_380` | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | 🟨 Med | `medium/Insert Delete GetRandom O(1).py`📝 | ☐ | ☐ | ☐ | ☐ |
 

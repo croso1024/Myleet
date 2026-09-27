@@ -18,8 +18,11 @@
     -10^4 <= Node.val <= 10^4
 
     思路 :
+    Post-order 去檢查左右子樹的深度,
+    得到左右子樹的深度後 , 就可在當前節點評斷是否 height-balanced , 
+    完成後回傳當前子樹的深度
 
-    複雜度 : Time O(?) / Space O(?)
+    複雜度 : Time O(N) / Space O(H)
 
     Trade-off :
 
@@ -43,7 +46,30 @@ class TreeNode:
 
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
-        pass
+
+        is_balanced = True 
+
+        def _recursive_traverse_for_balanced_judge(node:TreeNode): 
+            nonlocal is_balanced
+            # 空節點視為沒有高度
+            if node is None : return 0 
+            
+            # early stop 
+            if not is_balanced : return 0 
+
+            depth_of_left_subtree = _recursive_traverse_for_balanced_judge(node.left)
+            depth_of_right_subtree = _recursive_traverse_for_balanced_judge(node.right ) 
+
+            # 當左右子樹的高度差 > 1 
+            if abs(depth_of_left_subtree - depth_of_right_subtree) > 1 : 
+                is_balanced = False 
+            
+            # 回傳當前樹的深度 : 
+            return 1 + max(depth_of_left_subtree , depth_of_right_subtree) 
+        
+        _recursive_traverse_for_balanced_judge(root)
+
+        return is_balanced
 
 
 def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:

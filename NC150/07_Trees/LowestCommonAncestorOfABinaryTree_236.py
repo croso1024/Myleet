@@ -25,8 +25,21 @@
     p 與 q 都存在於樹中
 
     思路 :
+    已知所有節點的數值都不同, p != q 且 p , q 都必定在tree當中. 
+    一種解法，是去紀錄每一個遍歷到當前節點時，已經經過的Path. 
+    直到找到 p 和 q. 
+    如果此時我們紀錄了走訪到 p & q 的軌跡. 我們就能在O(N)內找到他們的共同祖先.
+    (從root出發 , 一直配對到第一個不等同的節點,則前一個就是LCA)
+    此算法時間複雜度 O(N) , 空間 O(H) , 但我想未必是最漂亮的. 
 
-    複雜度 : Time O(?) / Space O(?)
+    第二條解 , 修改遞回的定義. 
+    去找到當前節點下方是否存在p or q !? 
+    每一個節點去做 : 
+    - 檢查左子樹是否包含 p / q / p and q / None 
+    - 檢查右子樹是否包含 p / q / p and q / None 
+    - 基於上述兩個結果 , 判斷自己是不是LCA , 或著需要繼續待著"底下有誰的資訊上去" 
+
+    時間複雜度 O(N) , Space O(H)
 
     Trade-off :
 
@@ -34,6 +47,7 @@
 
 from collections import deque
 from typing import List, Optional
+
 
 
 class TreeNode:
@@ -47,12 +61,90 @@ class TreeNode:
         self.left = left
         self.right = right
 
+from typing import Dict , List 
 
 class Solution:
     def lowestCommonAncestor(
         self, root: Optional[TreeNode], p: Optional[TreeNode], q: Optional[TreeNode]
     ) -> Optional[TreeNode]:
-        pass
+        
+        # Only record the path to p/q 
+        path_hook : Dict[int , List[int]] = {
+            p.val : None , 
+            q.val : None , 
+        }
+        node_ref : Dict[int,TreeNode] = {} 
+
+        # pre-order traverse
+        def _traverse_and_record_path(node:TreeNode , current_path : List[int]):  
+            if node is None : return 
+            node_ref[node.val] = node
+            current_path.append(node.val)
+            # Copy a path from root to p/q
+            if node.val in path_hook: path_hook[node.val] = current_path[:]
+            _traverse_and_record_path(node.left , current_path=current_path)
+            _traverse_and_record_path(node.right , current_path=current_path) 
+            current_path.pop()
+
+            return 
+        
+        _traverse_and_record_path(node=root , current_path=[])
+        
+        # After traverse , we already have the path from root->p / root->q 
+        # Use O(N) compare and find the answer 
+        path_to_p = path_hook[p.val]
+        path_to_q = path_hook[q.val]
+
+        # 拿掉兩條軌跡 , 每一條軌跡從 root 出發 , 止於 p/q , 共通部分抽出即可. 
+        # 至少 root 會完全一樣 , 因此 path_to_p[0] == path_to_q[0]
+        for i in range( max(len(path_to_p) , len(path_to_q))) : 
+
+            if i < len(path_to_p) and i < len(path_to_q) : 
+
+                if path_to_p[i] != path_to_q[i] : return node_ref[path_to_p[i-1]]
+            
+            # 其中一條已經空了 , 直接回任意條前一格
+            else : 
+                return node_ref[path_to_p[i-1]]
+
+        return None
+
+from typing import Tuple
+class Solution:
+    def lowestCommonAncestor(
+        self, root: Optional[TreeNode], p: Optional[TreeNode], q: Optional[TreeNode]
+    ) -> Optional[TreeNode]:
+
+        answer = None 
+
+        # 回傳 : 該子樹底下有 p / q 兩個 boolean
+        def _recursive(node:TreeNode)-> Tuple[bool]:
+            nonlocal   answer
+            if node is None : return [None,None]
+
+            # post order , 先追左/右有沒有包含 p or q 
+            left_include_p , left_include_q = _recursive(node.left) 
+            right_include_p , right_include_q = _recursive(node.right) 
+
+            # 更新自己有沒有p/q 
+            if node.val == p.val or left_include_p or right_include_p : 
+                have_p = True 
+            else : 
+                have_p = False 
+
+            if node.val == q.val or left_include_q or right_include_q : 
+                have_q = True 
+            else : 
+                have_q = False 
+
+            if have_p and have_q and answer is None: 
+                answer = node 
+
+            # 回傳自己和底下子樹是否包含 p / q 
+            return  ( have_p , have_q )
+
+        _recursive(root) 
+        return answer
 
 
 def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:

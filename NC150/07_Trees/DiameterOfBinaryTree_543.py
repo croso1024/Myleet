@@ -17,9 +17,16 @@
     -100 <= Node.val <= 100
 
     思路 :
+    在思考這題應該以遞回來做嗎!? , 遞回來做的話要怎樣做?
+    讓每一個子樹回傳 ( 左右兩邊最深的子節點距離當前sub-root的距離!? , 並持續更新最佳解!? )
+    
+    要得到每一個Tree,左右兩端子樹最深的節點距離當前的位置,需要傳遞一個深度指標下去.
+    走Post-Order , 得到左右兩子樹個別最深的距離->更新答案->選一個更長的向上回報
 
-    複雜度 : Time O(?) / Space O(?)
-
+    複雜度 : 
+    - 時間複雜度 : 每一個節點走過一次 O(N) 
+    - 空間複雜度 : Stack Call O(H)
+    
     Trade-off :
 
 """
@@ -42,7 +49,29 @@ class TreeNode:
 
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
-        pass
+        maximum_distance = 0 
+        # 回傳當前這顆樹到其最深節點的距離
+        def _traverse_depthest_subtree(node:TreeNode) -> int : 
+            nonlocal maximum_distance
+            if node is None : return 0 
+            # Post-Order : 
+            left_subtree_depthest_distance = _traverse_depthest_subtree(node.left)
+            right_subtree_depthest_distance = _traverse_depthest_subtree(node.right)
+
+            # 嘗試更新一次最佳解 , 以目前的最佳解去比對 "目前這顆樹的左子最深 + 右子最深"
+            # ( 題目要的是兩個節點之間最大的 edge 數 , 而不是節點數 , 因此不用包含當前自身節點 )
+            maximum_distance = max(
+                maximum_distance , 
+                left_subtree_depthest_distance + right_subtree_depthest_distance
+            )
+            
+            # 回傳目前為止,包含自身這顆樹的深度
+            return 1 + max(left_subtree_depthest_distance , right_subtree_depthest_distance) 
+
+        _traverse_depthest_subtree(root) 
+
+        return maximum_distance
+            
 
 
 def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:
