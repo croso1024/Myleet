@@ -22,6 +22,15 @@
     1 <= target <= 40
 
     思路 :
+    給定的數值是互異的 , 而且可以重複選取. 但要列出的是 unique combination , 
+    直覺上會覺得先做一次 Sort , 再走 Backtracking 疊加比較直覺. 可以提早排除一些不可能的選擇枝.
+    但實際上也不需要. 就直接展開.
+
+    時間複雜度上,由於這一輪是可以重複選擇. 而 target 最大為40 , candidate 最小2
+    因此深度上最多重複挖20層. 每個元素最多出現20次這樣估. Candidate有30種
+
+    而空間複雜度上,除了results之外我們就只存一個Path ,Path大小如上估計為20 
+    
 
     複雜度 : Time O(?) / Space O(?)
 
@@ -34,7 +43,31 @@ from typing import List
 
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        pass
+        
+        results = [] 
+        size = len(candidates)
+
+        # index 紀錄目前使用到 candidates 的哪個位置. 
+        # accumulate : 展開到此當前的累積值. 
+        # path : 展開到此的路徑 , 要作為解的一部分
+        def _backtracking( index : int , accumulate : int , path : List[int]  ) : 
+            for i in range(index , size) : 
+                add = candidates[i]
+                path.append(add)
+
+                if accumulate + add == target : 
+                    results.append(path[:]) 
+                elif accumulate + add > target : 
+                    pass 
+                # 還可以繼續搜索,就往下展開
+                else : 
+                    _backtracking( i ,  accumulate=accumulate+add , path=path)
+                path.pop() 
+        
+        _backtracking(0 , 0 , []) 
+        return results
+
+            
 
 
 def canon(combos: List[List[int]]):

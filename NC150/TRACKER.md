@@ -165,8 +165,8 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `KthLargestElementInAStream_703` | [Kth Largest Element In a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | 🟩 Easy | `easy/Kth Largest Element in a Stream.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `LastStoneWeight_1046` | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/) | 🟩 Easy | `easy/Last Stone Weight.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `KClosestPointsToOrigin_973` | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | 🟨 Med | `medium/K Closest Points to Origin.py`📝 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `KthLargestElementInAnArray_215` | [Kth Largest Element In An Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | 🟨 Med | `medium/Kth Largest Element in an Array.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |
-| P1 | `TaskScheduler_621` | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | 🟨 Med | `medium/Task Scheduler.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `KthLargestElementInAnArray_215` | [Kth Largest Element In An Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | 🟨 Med | `medium/Kth Largest Element in an Array.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
+| P1 | `TaskScheduler_621` | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | 🟨 Med | `medium/Task Scheduler.py`📝 | ☑ | ☐ | ☐ | ☐ |
 | — | `DesignTwitter_355` | [Design Twitter](https://leetcode.com/problems/design-twitter/) | 🟨 Med | `medium/Design Twitter.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `FindMedianFromDataStream_295` | [Find Median From Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
 
@@ -176,13 +176,13 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| **P0** | `Subsets_78` | [Subsets](https://leetcode.com/problems/subsets/) | 🟨 Med | `medium/Subsets.js`📝 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `CombinationSum_39` | [Combination Sum](https://leetcode.com/problems/combination-sum/) | 🟨 Med | `medium/Combination Sum.js`📝 +2 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `Subsets_78` | [Subsets](https://leetcode.com/problems/subsets/) | 🟨 Med | `medium/Subsets.js`📝 | ☑ | ☐ | ☐ | ☑ |
+| **P0** | `CombinationSum_39` | [Combination Sum](https://leetcode.com/problems/combination-sum/) | 🟨 Med | `medium/Combination Sum.js`📝 +2 | ☑ | ☐ | ☐ | ☐ |
 | P1 | `CombinationSumII_40` | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | 🟨 Med | `medium/Combination Sum II.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `Permutations_46` | [Permutations](https://leetcode.com/problems/permutations/) | 🟨 Med | `RUSH/Permutations.js` | ☐ | ☐ | ☐ | ☐ |
 | — | `SubsetsII_90` | [Subsets II](https://leetcode.com/problems/subsets-ii/) | 🟨 Med | `medium/Subsets II.js`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `GenerateParentheses_22` | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | 🟨 Med | `medium/Generate_Parentheses.py` +1 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `WordSearch_79` | [Word Search](https://leetcode.com/problems/word-search/) | 🟨 Med | `medium/Word Search.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `WordSearch_79` | [Word Search](https://leetcode.com/problems/word-search/) | 🟨 Med | `medium/Word Search.py`📝 +2 | ☑ | ☐ | ☐ | ☐ |
 | P1 | `PalindromePartitioning_131` | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
 | — | `LetterCombinationsOfAPhoneNumber_17` | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | 🟨 Med | `medium/Letter Combinations of a Phone Number.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |
 | — | `NQueens_51` | [N Queens](https://leetcode.com/problems/n-queens/) | 🟥 Hard | `hard/N-Queens.py`📝 | ☐ | ☐ | ☐ | ☐ |
