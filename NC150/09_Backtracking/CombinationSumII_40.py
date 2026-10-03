@@ -20,9 +20,12 @@
     1 <= target <= 30
 
     思路 :
+    走Backtracking可以解 , 這一題不能重複選擇. 因此解空間會持續限縮. 
+    由於每一種數字可以有選or不選兩條路 , 可以走的空間選擇枝最多為 2^n , 
 
-    複雜度 : Time O(?) / Space O(?)
-
+    複雜度 :
+    時間複雜度 : 展開所有選擇枝 , 解空間最多 2^n 
+    空間複雜度 : 而每一個解答都可能要添加到hash set , 故最大極限為 n*(2^n)
     Trade-off :
 
 """
@@ -32,7 +35,41 @@ from typing import List
 
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
-        pass
+        
+        results = [] 
+        size = len(candidates) 
+        sorted_candidates = sorted(candidates)
+
+        # index : 逐步限縮的搜索空間起始位置.
+        # path 走到當前位置的軌跡
+        # 走到當前位置的累積值
+        def _backtracking( index : int , path : List[int], accumulate : int): 
+
+            if accumulate == target : 
+                copied_path = path[:]
+                results.append(copied_path)
+                return 
+            
+            elif accumulate > target :
+                return 
+
+            # 累加值還沒超過Sum , 則此時可以再從搜索空間找數值來加
+            # 若搜索空間空了也無法找
+            for i in range(index , size): 
+
+                # 若同一層內,第二次開始展開的結果與前一個值一樣,這邊就可以剪枝. 因為這個解一定包含在前一個展開後的一部分
+                if i > index and sorted_candidates[i] == sorted_candidates[i-1] : 
+                    continue
+
+                add = sorted_candidates[i]
+                path.append(add)
+                _backtracking(i+1 , path , accumulate=accumulate+add)
+                path.pop()
+
+        _backtracking(index=0,path=[],accumulate=0)
+
+        return results 
+
 
 
 def canon(combos: List[List[int]]):

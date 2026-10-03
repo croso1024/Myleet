@@ -27,24 +27,91 @@
     addNum / findMedian 總呼叫次數最多 5 * 10^4
 
     思路 :
+    直覺會認為需要Maintain兩組Heap , 
+    這兩組Heap就是將將數字分成兩堆, 而中位數就藏在兩堆之間. 
+    我們將其分為 first_half ( max heap ) , second_half (min heap )
+    在添加數字的過程當中嚴格控制這條不變式 :   abs(len(first_half) - len(second_half)) <= 1 
+    1. 若 first_half = second_half + 1 , 則 first half 的 top (max) 就是中位數
+    2. 若 first_half + 1 = second_half , 則 second half 的 top (min) 就是中位數
+    3. 若 first_half = second_half : 則兩邊的 Top 平均值就是中位數 
 
-    複雜度 : Time O(?) / Space O(?)
+    另一個要點 ,就是在加入數字時. 要依據兩堆heap頂的數值去決定要丟入哪個Heap , 每次丟完也需要做一個平衡的動作. 
+
+    複雜度 :
+    - 時間複雜度 , 假設每一個Heap大小為 N ,   每次插入 O(NlogN), 由於我們使用兩個Heap且嚴格控制不變量.
+    由於有平衡動作的存在,每一次一個數值加入Heap後(一次插入) , 最多只需要一次推出+一次插入就可以再平衡
+    因此時間複雜度為 O( N/2 * Log(N/2) ) , 空間複雜度為 O(N)
 
     Trade-off :
 
 """
 
 
+from heapq import heappop , heappush 
 class MedianFinder:
     def __init__(self):
-        pass
+        
+        # max heap 
+        self.first_half = [] 
+        # min heap 
+        self.second_half = [] 
 
     def addNum(self, num: int) -> None:
-        pass
+        # 關鍵是要控制兩邊Heap的大小。
+        # 一個數字加入,有可能大於兩端 heap 的任意數值 ,先決定新數值要放入哪個Heap, 
+        # 最後再平衡Heap的大小. 
+
+        max_from_first_half = -1 * self.first_half[0] if self.first_half else None 
+        min_from_second_half = self.second_half[0] if self.second_half else None
+
+        if max_from_first_half is not None and min_from_second_half is not None : 
+
+            if max_from_first_half <= num <= min_from_second_half : 
+                heappush(self.first_half , -1 * num ) 
+            elif num < max_from_first_half : 
+                heappush(self.first_half , -1 * num ) 
+            elif num > min_from_second_half : 
+                heappush(self.second_half , num) 
+
+        elif max_from_first_half is not None : 
+
+            if num > max_from_first_half : 
+                heappush(self.second_half , num) 
+            else : 
+                heappush(self.first_half , -1 * num ) 
+        
+        elif min_from_second_half is not None : 
+
+            if num < min_from_second_half : 
+                heappush(self.first_half , -1 * num ) 
+            else : 
+                heappush(self.second_half , num) 
+        
+        else : 
+            heappush(self.first_half , -1 * num ) 
+            
+
+        while abs(len(self.first_half) - len(self.second_half)) > 1 : 
+            if len(self.first_half) > len(self.second_half): 
+                val = -1 * heappop(self.first_half)
+                heappush(self.second_half , val) 
+            else : 
+                val = heappop(self.second_half) 
+                heappush(self.first_half , -1 * val ) 
+        
 
     def findMedian(self) -> float:
-        pass
+        if len(self.first_half) == len(self.second_half): 
+            # 兩邊的Top拿出來平均
+            max_from_first_half = -1 * self.first_half[0]
+            min_from_second_half = self.second_half[0]
 
+            return (max_from_first_half + min_from_second_half)/2 
+        
+        elif len(self.first_half) == len(self.second_half) + 1 : 
+            return -1 * self.first_half[0]
+        else : 
+            return self.second_half[0]
 
 def run(ops, args):
     finder = None

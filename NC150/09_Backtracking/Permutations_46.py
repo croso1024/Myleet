@@ -19,8 +19,14 @@
     nums 中的元素互異
 
     思路 :
+    Backtracking全展開, 每一輪都從當前解空間隨意挑一個出來Append
+    直到解空間清空. 
 
-    複雜度 : Time O(?) / Space O(?)
+    簡易的做法,是直接儲存剩餘解空間, 
+    每一回合都要Copy解空間的剩餘量 O(N) , 遞回深度最大為N , 故空間複雜度最大為 O(N^2)
+
+    複雜度 : 
+    時間複雜度 : O(N!) ( 全展開 ) , 空間為 O(N^2)
 
     Trade-off :
 
@@ -31,7 +37,24 @@ from typing import List
 
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        pass
+        
+        results = [] 
+
+        def _backtracking( search_space: List[int] , path : List[int]  ) : 
+
+            if not search_space : 
+                results.append(path[:]) 
+                return 
+
+            for i in range(len(search_space)): 
+                choice = search_space[i] 
+                path.append(choice)
+                # 限縮搜索空間 
+                _backtracking(search_space= search_space[:i] + search_space[i+1:] , path=path)
+                path.pop()
+        
+        _backtracking(search_space=nums , path=[])
+        return results 
 
 
 def canon(perms: List[List[int]]):

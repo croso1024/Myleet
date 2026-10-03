@@ -26,6 +26,8 @@
     addWord / search 總呼叫次數最多 10^4
 
     思路 :
+    這一題接近字典樹,插入值的部分保持一樣 , 但在搜索上,支援 "." 的通配符.
+    這代表在某一層字典樹節點上,需要向下完全展開. 
 
     複雜度 : Time O(?) / Space O(?)
 
@@ -34,15 +36,55 @@
 """
 
 
+from curses import nonl
+from typing import Dict 
+class Node : 
+    def __init__( self, char : str ):
+        self.char : str = char 
+        self.chidren : Dict[str , Node] = {}
+        self.end_of_word = False 
+
 class WordDictionary:
     def __init__(self):
-        pass
+        self.root = Node(char="") 
 
     def addWord(self, word: str) -> None:
-        pass
+        
+        cur_node = self.root 
+        for char in word : 
+            if char in cur_node.chidren : 
+                cur_node = cur_node.chidren[char]  
+            else : 
+                new_node = Node(char=char)
+                cur_node.chidren[char] = new_node 
+                cur_node = new_node 
+        cur_node.end_of_word = True 
 
     def search(self, word: str) -> bool:
-        pass
+        find = False 
+        # 接收當前的所在節點 , 以及剩下要配對的字串
+        def _recursive_search(node:Node, rest:str):  
+            nonlocal find 
+
+            if len(rest) == 0 :
+                if node.end_of_word : find = True 
+                return 
+
+            char = rest[0] 
+
+            if char == "." : 
+                for char in node.chidren : 
+                    _recursive_search(node.chidren[char] , rest=rest[1:])
+
+            elif char in node.chidren :
+                _recursive_search(node.chidren[char] , rest=rest[1:])
+                
+            else : 
+                return 
+        
+        _recursive_search(node=self.root,rest=word)
+        return find 
+    
 
 
 def run(ops, args):
@@ -117,6 +159,12 @@ if __name__ == "__main__":
             [None, None, None, True],
             "同一字加入兩次,仍然只算存在",
         ),
+        (
+            ["WordDictionary","addWord","addWord","search","search","search","search","search","search"],
+            [[],["a"],["a"],["."],["a"],["aa"],["a"],[".a"],["a."]],
+            [None,None,None,True,True,False,True,False,False],
+            "測試例"
+        )
     ]
 
     for ops, args, expected, note in test_set:

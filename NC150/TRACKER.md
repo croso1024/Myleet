@@ -168,7 +168,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | **P0** | `KthLargestElementInAnArray_215` | [Kth Largest Element In An Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | 🟨 Med | `medium/Kth Largest Element in an Array.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `TaskScheduler_621` | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | 🟨 Med | `medium/Task Scheduler.py`📝 | ☑ | ☐ | ☐ | ☐ |
 | — | `DesignTwitter_355` | [Design Twitter](https://leetcode.com/problems/design-twitter/) | 🟨 Med | `medium/Design Twitter.py`📝 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `FindMedianFromDataStream_295` | [Find Median From Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `FindMedianFromDataStream_295` | [Find Median From Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | 🟥 Hard | — | ☑ | ☐ | ☐ | ☑ |
 
 ## 9. Backtracking · 10 題 · W4
 
@@ -178,8 +178,8 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | **P0** | `Subsets_78` | [Subsets](https://leetcode.com/problems/subsets/) | 🟨 Med | `medium/Subsets.js`📝 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `CombinationSum_39` | [Combination Sum](https://leetcode.com/problems/combination-sum/) | 🟨 Med | `medium/Combination Sum.js`📝 +2 | ☑ | ☐ | ☐ | ☐ |
-| P1 | `CombinationSumII_40` | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | 🟨 Med | `medium/Combination Sum II.py`📝 | ☐ | ☐ | ☐ | ☐ |
-| P1 | `Permutations_46` | [Permutations](https://leetcode.com/problems/permutations/) | 🟨 Med | `RUSH/Permutations.js` | ☐ | ☐ | ☐ | ☐ |
+| P1 | `CombinationSumII_40` | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | 🟨 Med | `medium/Combination Sum II.py`📝 | ☑ | ☐ | ☐ | ☑ |
+| P1 | `Permutations_46` | [Permutations](https://leetcode.com/problems/permutations/) | 🟨 Med | `RUSH/Permutations.js` | ☑ | ☐ | ☐ | ☑ |
 | — | `SubsetsII_90` | [Subsets II](https://leetcode.com/problems/subsets-ii/) | 🟨 Med | `medium/Subsets II.js`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `GenerateParentheses_22` | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | 🟨 Med | `medium/Generate_Parentheses.py` +1 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `WordSearch_79` | [Word Search](https://leetcode.com/problems/word-search/) | 🟨 Med | `medium/Word Search.py`📝 +2 | ☑ | ☐ | ☐ | ☐ |
@@ -193,8 +193,8 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| **P0** | `ImplementTriePrefixTree_208` | [Implement Trie Prefix Tree](https://leetcode.com/problems/implement-trie-prefix-tree/) | 🟨 Med | `medium/Implement Trie (Prefix Tree).py`📝 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `DesignAddAndSearchWordsDataStructure_211` | [Design Add And Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `ImplementTriePrefixTree_208` | [Implement Trie Prefix Tree](https://leetcode.com/problems/implement-trie-prefix-tree/) | 🟨 Med | `medium/Implement Trie (Prefix Tree).py`📝 | ☑ | ☐ | ☐ | ☑ |
+| **P0** | `DesignAddAndSearchWordsDataStructure_211` | [Design Add And Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☐ |
 | P1 | `WordSearchII_212` | [Word Search II](https://leetcode.com/problems/word-search-ii/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
 
 ## 11. Graphs · 13 題 · W5
@@ -203,7 +203,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| **P0** | `NumberOfIslands_200` | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | 🟨 Med | `medium/Number of Islands.js`📝 +2 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `NumberOfIslands_200` | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | 🟨 Med | `medium/Number of Islands.js`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `MaxAreaOfIsland_695` | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
 | P1 | `CloneGraph_133` | [Clone Graph](https://leetcode.com/problems/clone-graph/) | 🟨 Med | `medium/Clone Graph.js`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | — | `WallsAndGates_286` | [Walls And Gates](https://leetcode.com/problems/walls-and-gates/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
@@ -238,7 +238,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | — | `ClimbingStairs_70` | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | 🟩 Easy | `TOP150Review/Climbing Stairs.py` +1 | ☐ | ☐ | ☐ | ☐ |
 | — | `MinCostClimbingStairs_746` | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) | 🟩 Easy | `easy/Min Cost Climbing Stairs.py`📝 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `HouseRobber_198` | [House Robber](https://leetcode.com/problems/house-robber/) | 🟨 Med | `medium/House Robber.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `HouseRobber_198` | [House Robber](https://leetcode.com/problems/house-robber/) | 🟨 Med | `medium/House Robber.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `HouseRobberII_213` | [House Robber II](https://leetcode.com/problems/house-robber-ii/) | 🟨 Med | `medium/House Robber II.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `LongestPalindromicSubstring_5` | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | 🟨 Med | `medium/Longest Palindromic Substring.js`📝 +5 | ☐ | ☐ | ☐ | ☐ |
 | — | `PalindromicSubstrings_647` | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | 🟨 Med | `medium/Palindromic Substrings.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |

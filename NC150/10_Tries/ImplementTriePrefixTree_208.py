@@ -22,26 +22,62 @@
     insert / search / startsWith 總呼叫次數最多 3 * 10^4
 
     思路 :
+    直接做一個Tree , 就可以處理字典前綴樹的需要. 
+    問題應該在怎樣回答"這個字"是否有被加入過. 
+    即區分 , 當樹裡面有的是 apple , 則 app 其實並沒有被插入過. 
 
-    複雜度 : Time O(?) / Space O(?)
+    直覺做法是一個 hashset , 另一種我認為可能更省空間的是在每個節點去紀錄 flag , 標記曾經有某個單字到此位置.
+    每一個樹的下分枝幹(往下路徑), 都由一個HashMap儲存即可. 
+    Head則用一個Dummy head
+
+    複雜度 : 
+    設 L 為單字長度 , N為操作次數
+    每一次插入節點 , O(L) 每一次查詢也一樣 , O(L), 全部塞入字典樹為 O(NL) 
+    而空間複雜度則等同於節點數. 
+    已知節點數量的上限空間 , 應該是 26^2000 
 
     Trade-off :
 
 """
 
 
+from typing import Dict 
+class Node : 
+    def __init__( self, char : str ):
+        self.char : str = char 
+        self.chidren : Dict[str , Node] = {}
+        self.end_of_word = False 
+
 class Trie:
     def __init__(self):
-        pass
+        self.root = Node(char = "") 
 
     def insert(self, word: str) -> None:
-        pass
+        
+        cur_node = self.root 
+        for char in word : 
+            
+            if char in cur_node.chidren : 
+                cur_node = cur_node.chidren[char] 
+            else : 
+                new_node = Node(char=char) 
+                cur_node.chidren[char] = new_node
+                cur_node = new_node 
+        cur_node.end_of_word = True 
 
     def search(self, word: str) -> bool:
-        pass
+        cur_node = self.root 
+        for char in word : 
+            if char not in cur_node.chidren:return False 
+            cur_node = cur_node.chidren[char] 
+        return True if cur_node.end_of_word else False 
 
     def startsWith(self, prefix: str) -> bool:
-        pass
+        cur_node = self.root 
+        for char in prefix : 
+            if char not in cur_node.chidren : return False 
+            cur_node = cur_node.chidren[char] 
+        return True 
 
 
 def run(ops, args):
