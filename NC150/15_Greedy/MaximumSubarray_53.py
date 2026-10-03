@@ -16,8 +16,15 @@
     -10^4 <= nums[i] <= 10^4
 
     思路 :
-
-    複雜度 : Time O(?) / Space O(?)
+    這一題直覺上會想到雙指標,但稍微想一下會發現沒有特別能控制指標範圍伸縮的條件. 
+    下一條路就是DP , 會思考要 1D or 2D DP
+    會覺得可以用 DP , 
+    dp[i] 表示 : 包含 nums[i] 作為結尾的子陣列最大可以到多少. 
+    由於答案必定存在某一個子陣列 , 因此 max(dp) 就是答案. 
+    而以 nums[i] 作為結尾的子陣列最大值 : max(nums[i] , nums[i] + dp[i-1]) 
+    
+    複雜度 : 
+    時間複雜度 O(N) , 空間上只要常數個變數去紀錄當前最大值與 dp[i-1] 即可 , 故空間複雜度為 O(C)
 
     Trade-off :
 
@@ -28,7 +35,19 @@ from typing import List
 
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        pass
+        
+        maximum_subarray_sum = float("-inf")
+        hook = None 
+
+        for num in nums : 
+            if hook is None : 
+                hook = num 
+            else :
+                hook = max(num ,  num + hook)
+            maximum_subarray_sum = max(maximum_subarray_sum , hook)
+        
+        return maximum_subarray_sum
+
 
 
 if __name__ == "__main__":

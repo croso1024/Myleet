@@ -273,7 +273,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| **P0** | `MaximumSubarray_53` | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | 🟨 Med | `medium/Maximum Subarray.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `MaximumSubarray_53` | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | 🟨 Med | `medium/Maximum Subarray.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `JumpGame_55` | [Jump Game](https://leetcode.com/problems/jump-game/) | 🟨 Med | `medium/Jump_Game.py` +2 | ☐ | ☐ | ☐ | ☐ |
 | — | `JumpGameII_45` | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | 🟨 Med | `TOP150Review/Jump Game II.py` | ☐ | ☐ | ☐ | ☐ |
 | P1 | `GasStation_134` | [Gas Station](https://leetcode.com/problems/gas-station/) | 🟨 Med | `medium/Gas Station.py`📝 | ☐ | ☐ | ☐ | ☐ |
@@ -289,7 +289,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | P1 | `InsertInterval_57` | [Insert Interval](https://leetcode.com/problems/insert-interval/) | 🟨 Med | `medium/Insert Interval.js`📝 +1 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `MergeIntervals_56` | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | 🟨 Med | `TOP150Review/Merge Intervals.py` +1 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `MergeIntervals_56` | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | 🟨 Med | `TOP150Review/Merge Intervals.py` +1 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `NonOverlappingIntervals_435` | [Non Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | 🟨 Med | `medium/Non-overlapping Intervals.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `MeetingRooms_252` | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | 🟩 Easy | — | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `MeetingRoomsII_253` | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |

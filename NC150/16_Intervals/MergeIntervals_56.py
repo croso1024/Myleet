@@ -22,7 +22,21 @@
 
     思路 :
 
-    複雜度 : Time O(?) / Space O(?)
+    應該必然是一個 O(N) , N 為 interval 組數的演算法.
+    但因為給定的題目沒有排序這些 interval , 完全有可能需要先做 Sorting 
+    如果做 Sorting 才合併. 那基本上算法時間複雜度就是 O(NlogN) , 空間複雜度則除了暫存解答的輔助空間外,
+    就只需要hook掛著當前正在合併的解. 
+    Sorting 解 : 
+    給定兩個Interval  [a,b] , [c,d] 且  a <= c 的情況下,要重疊則 b >= c 
+
+    另外一個想法是 , 既然 start_i / end_i 的值域只有 0 ~ 10^4 , 
+    是否直接初始化一個  10^4 大小的 boolean Array , 接著 O(N) 把所有的都填入就可!? 
+
+
+
+    複雜度 : 
+    Sorting 解 : 
+    時間複雜度 O(NlogN) , 空間 O(C)
 
     Trade-off :
 
@@ -30,11 +44,78 @@
 
 from typing import List
 
-
+# Solution.1 先做 Sorting 的解 : 
 class Solution:
-    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
-        pass
 
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        
+        intervals.sort() 
+        sorted_intervals = intervals # Rename 
+        # 開始做 Merge, 題目沒說不能改原始解,那就直接 in-place 處理,不用額外輔助空間. 
+
+        cur_interval : List[int] = None 
+        results = [] 
+
+        for interval in sorted_intervals : 
+
+            if cur_interval is None : 
+                cur_interval = interval 
+                continue 
+                
+            # 現在開始 , 處理合併
+            # 若下一個 Interval 與當前的重疊,則更新 Current interval 的範圍 (可能變大) 
+            if cur_interval[1] >= interval[0] : 
+                cur_interval[1] = max(cur_interval[1] , interval[1]) 
+            
+            # 若不重疊,就可以把先前合併完的結果丟進去, 並移動到下一個Interval
+            else : 
+                results.append(cur_interval) 
+                cur_interval = interval 
+        
+        # 若手上還有 cur_interval , 記得加入回去
+        if cur_interval : 
+            results.append(cur_interval) 
+        
+        return results 
+    
+
+# Solution.2 嘗試做 基於 Boolean Array 的解 : 
+class Solution:
+
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+
+        # 0 ~ 10^4
+        bit_array = [False] * ( pow(10,4) + 1 ) 
+
+        for interval in intervals : 
+            from_i , to_i = interval 
+            bit_array[from_i:to_i+1] = [True] * (to_i - from_i + 1)
+        # 完成之後開始走.
+
+        i = 0 
+        cur_start = None 
+        results = [] 
+
+        while i < len(bit_array) : 
+
+            if cur_start is None  and bit_array[i] :
+                cur_start = i 
+            
+            elif cur_start is not None : 
+                # 斷掉,則添加到答案集,重置cur_start
+                if not bit_array[i] : 
+                    results.append([cur_start ,i-1]) 
+                    cur_start = None 
+            
+            i += 1 
+        
+        if cur_start is not None : 
+            results.append([cur_start , pow(10,4)]) 
+        
+        return results 
+
+
+        
 
 def canon(intervals: List[List[int]]):
     """區間彼此的順序不影響對錯;每段內部的 [start, end] 要保留。"""
