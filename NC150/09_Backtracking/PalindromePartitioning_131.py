@@ -18,8 +18,26 @@
     s 只含小寫英文字母
 
     思路 :
+    這一題不看題型會覺得是Array,但思考一下會導向Backtracking, 
+    題目中一個額外的思考點是該如何快速判斷回文. 考量到已知這題最大長度為16, 
+    先用一個Naive作法去判斷回文. 將演算法重心放在如何做 Backtraking. 
+    回溯樹展開,只要保持回文就繼續展,直到非回文中斷
 
-    複雜度 : Time O(?) / Space O(?)
+    上述解法完全想錯,我誤解了題目意思. 但也讓這一題變得很難.
+    要切出不同片段來讓解答每一段都是回文.問題變成要切幾刀 , 切在哪.
+    和 Agent 討論一下這一題. 關鍵在調整切開的範圍. 
+    給定 "aab" , 能切的範圍有 1. 切一個字 / 2. 切兩個字 / 3. 切三個字....
+    前兩者切完後還能繼續往下展開 , 展開又能再 1. 切一個字/2.切兩個字
+    因此這一題追蹤用的軌跡應該是 List[str]
+    
+    這一題我認為很精華,思考方式需要繞一層
+
+    複雜度 : 
+    - 每一次 Evaluate 回文 , O(S) 
+    - 展開的層數, 在最大情況下每一層只切一個字的話就是往下切16層. 
+    - 空間複雜度 , 最多往下切16層, 每一層攜帶長度最多為S的字串 , 空間複雜度為 O(S^2)
+    
+    Time O(?) / Space O(?)
 
     Trade-off :
 
@@ -30,7 +48,40 @@ from typing import List
 
 class Solution:
     def partition(self, s: str) -> List[List[str]]:
-        pass
+        
+        results = [] 
+
+        def is_palindrome(string:str): 
+            left , right = 0 , len(string) - 1 
+            while left < right : 
+                if string[left] == string[right] : 
+                    left += 1
+                    right -= 1 
+                else : return False 
+            return True 
+
+        def _backtracking( rest:str , path : List[str] ):  
+
+            # 剛好走完,就代表這一路上所有的都是迴文,可以加入答案
+            if len(rest) == 0 : 
+                results.append(path[:])
+                return 
+            
+            # 依據剩餘字串的長度,分出不同切法
+            for i in range(len(rest)) : 
+                
+                # 開始切,切完如果是切出迴文才繼續. 
+                partition = rest[:i+1] 
+                if is_palindrome(partition) :
+                    path.append(partition)
+                    _backtracking( rest = rest[i+1:] , path = path)
+                    path.pop()
+            
+
+        _backtracking(rest = s , path = [])
+        return results 
+            
+            
 
 
 def canon(parts: List[List[str]]):

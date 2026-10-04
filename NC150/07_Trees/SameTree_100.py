@@ -16,8 +16,12 @@
     -10^4 <= Node.val <= 10^4
 
     思路 :
+    寫一個遞迴同時走兩顆Tree , 每一個遞迴在回答當前子樹是否相同. 
+    對單一節點來說就是回答節點是否存在且值相同
 
-    複雜度 : Time O(?) / Space O(?)
+    複雜度 :
+    - 時間複雜度 ,每個節點一次 O(N) 
+    - 空間複雜度等同深度 , Worse case O(N)
 
     Trade-off :
 
@@ -41,7 +45,19 @@ class TreeNode:
 
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
-        pass
+        # 若兩節點都為空,則該子樹相同,若只有單一節點存在則不同
+        if p is None and q is None : return True 
+        elif p is None or q is None : return False 
+
+        # 兩節點都在,則比較值以及左右子樹
+
+        p_val = p.val 
+        q_val = q.val 
+        if p_val != q_val : return False 
+        
+
+        return (self.isSameTree(p.left,q.left)) and (self.isSameTree(p.right , q.right)) 
+
 
 
 def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:

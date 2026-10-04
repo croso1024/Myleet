@@ -144,7 +144,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | **P0** | `MaximumDepthOfBinaryTree_104` | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | 🟩 Easy | `easy/MaximumDepth_of_BinaryTree.py` +2 | ☑ | ☐ | ☐ | ☐ |
 | — | `DiameterOfBinaryTree_543` | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | 🟩 Easy | `easy/Diameter of Binary Tree.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `BalancedBinaryTree_110` | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | 🟩 Easy | `easy/Balanced Binary Tree.py`📝 | ☑ | ☐ | ☐ | ☑ |
-| — | `SameTree_100` | [Same Tree](https://leetcode.com/problems/same-tree/) | 🟩 Easy | `easy/Same Tree.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
+| — | `SameTree_100` | [Same Tree](https://leetcode.com/problems/same-tree/) | 🟩 Easy | `easy/Same Tree.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | — | `SubtreeOfAnotherTree_572` | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | 🟩 Easy | `easy/Subtree of Another Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `LowestCommonAncestorOfABinarySearchTree_235` | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | 🟨 Med | `medium/Lowest Common Ancestor of a Binary Search Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `BinaryTreeLevelOrderTraversal_102` | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | 🟨 Med | `medium/Binary Tree Level Order Traversal.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
@@ -183,7 +183,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `SubsetsII_90` | [Subsets II](https://leetcode.com/problems/subsets-ii/) | 🟨 Med | `medium/Subsets II.js`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `GenerateParentheses_22` | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | 🟨 Med | `medium/Generate_Parentheses.py` +1 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `WordSearch_79` | [Word Search](https://leetcode.com/problems/word-search/) | 🟨 Med | `medium/Word Search.py`📝 +2 | ☑ | ☐ | ☐ | ☐ |
-| P1 | `PalindromePartitioning_131` | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
+| P1 | `PalindromePartitioning_131` | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☐ |
 | — | `LetterCombinationsOfAPhoneNumber_17` | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | 🟨 Med | `medium/Letter Combinations of a Phone Number.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |
 | — | `NQueens_51` | [N Queens](https://leetcode.com/problems/n-queens/) | 🟥 Hard | `hard/N-Queens.py`📝 | ☐ | ☐ | ☐ | ☐ |
 
@@ -207,7 +207,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `MaxAreaOfIsland_695` | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
 | P1 | `CloneGraph_133` | [Clone Graph](https://leetcode.com/problems/clone-graph/) | 🟨 Med | `medium/Clone Graph.js`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | — | `WallsAndGates_286` | [Walls And Gates](https://leetcode.com/problems/walls-and-gates/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `RottingOranges_994` | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | 🟨 Med | `medium/Rotting Oranges.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `RottingOranges_994` | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | 🟨 Med | `medium/Rotting Oranges.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `PacificAtlanticWaterFlow_417` | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | 🟨 Med | `medium/Pacific Atlantic Water Flow.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `SurroundedRegions_130` | [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) | 🟨 Med | `medium/Surrounded Regions.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `CourseSchedule_207` | [Course Schedule](https://leetcode.com/problems/course-schedule/) | 🟨 Med | `medium/Course Schedule.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |

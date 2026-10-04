@@ -23,8 +23,20 @@
     grid[i][j] 是 0、1 或 2
 
     思路 :
+    這一題的想法會是BFS去算從爛橘子擴散到所有好橘子的路線. 
+    但也可以想成從好橘子到壞橘子的最遠路徑或是其實無法抵達. 
+    題目的一個點是在壞橘子可能一開始就有很多顆. 
+    所以我的想法是要先蒐集所有壞橘子的位置. 然後一口氣走BFS去模擬所有壞橘子開始擴散的狀況. 
+    BFS過程去檢查是不是所有好橘子都已經被汙染. 如果是則結束並回傳時間. 否則就是不會全壞
 
-    複雜度 : Time O(?) / Space O(?)
+    edge case : 一開始就沒有好橘子 , 答案就是0 , 一開始就沒有壞橘子 , 答案是 -1 
+
+    複雜度 : 
+    - 時間複雜度 : 所有節點走一次O(N) , 
+    - 空間 : O(N)
+    這一題有個陷阱,就是最終答案的分鐘數, 需要考慮到 
+    "最遠的好橘子被汙染的時間為T , 但因為好橘子被汙染因此可以展開下一輪BFS,這會讓最終時間變成T+1"
+    故回圈判斷需要多一個好橘子還有,才繼續擴散
 
     Trade-off :
 
@@ -33,10 +45,79 @@
 import copy
 from typing import List
 
-
+from collections import deque 
 class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
-        pass
+        
+        # Step.1 蒐集壞橘子和好橘子的位置
+        fresh  = set()
+        bad  =set()
+
+        m , n = len(grid) , len(grid[0])
+
+        for i in range(m): 
+            for j in range(n): 
+                if grid[i][j] == 1 : 
+                    fresh.add((i,j))
+                elif grid[i][j] == 2 : 
+                    bad.add((i,j))
+        
+        if len(fresh) == 0 : return 0 
+        if len(bad) == 0 : return -1 
+
+
+        # Step.2 以所有壞橘子位置為起點,開始走BFS
+        queue = deque()
+        visited = set()
+        for (i,j) in bad : 
+            queue.append((i,j)) 
+            visited.add((i,j)) 
+        
+        # 第0分鐘 
+        minutes = 0 
+        while queue and len(fresh) : 
+            # 先記錄下BFS這一輪開始時 , 有幾個爛橘子要出發 
+            size = len(queue) 
+
+            for _ in range(size): 
+
+                # 取出一顆壞橘子,開始擴散
+                i , j  = queue.popleft()  
+
+                if i + 1 < m and (i+1,j) not in visited : 
+                    visited.add((i+1,j))
+                    # 若有好橘子則污染,並加入queue
+                    if (i+1,j) in fresh :  
+                        fresh.remove((i+1,j))
+                        queue.append((i+1,j)) 
+                
+                if i - 1 >= 0 and (i-1,j) not in visited : 
+                    visited.add((i-1,j))
+                    # 若有好橘子則污染,並加入queue
+                    if (i-1,j) in fresh :  
+                        fresh.remove((i-1,j))
+                        queue.append((i-1,j)) 
+                
+                if j + 1 < n and (i,j+1) not in visited : 
+                    visited.add((i,j+1))
+                    # 若有好橘子則污染,並加入queue
+                    if (i,j+1) in fresh :  
+                        fresh.remove((i,j+1))
+                        queue.append((i,j+1)) 
+                
+                if j - 1 >= 0 and (i,j-1) not in visited : 
+                    visited.add((i,j-1))
+                    # 若有好橘子則污染,並加入queue
+                    if (i,j-1) in fresh :  
+                        fresh.remove((i,j-1))
+                        queue.append((i,j-1)) 
+            
+            minutes += 1 
+
+        # BFS 結束後,如果好橘子還存在就是 -1 , 不存在則回傳分鐘數 
+
+        if len(fresh) > 0 : return -1 
+        return minutes 
 
 
 if __name__ == "__main__":
