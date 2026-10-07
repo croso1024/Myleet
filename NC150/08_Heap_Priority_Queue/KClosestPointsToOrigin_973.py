@@ -20,19 +20,62 @@
     -10^4 <= xi, yi <= 10^4
 
     思路 :
+    直覺上覺得很Naive , 直接計算每一個點到原點的距離. 
+    並以此維護一個大小為 K 的 Max Heap 即可!? 
 
-    複雜度 : Time O(?) / Space O(?)
+    每個 element 保持紀錄座標位置,以及和原點的距離. 
+    Max heap 紀錄前K個最靠近的值. 
+    一但有新值出現,就和 Heap Top 比較 , 更小就納入,更大就跳過. 
+    時間複雜度 : N組元素,但維護K的大小, 時間複雜度 O(NlogK) , 空間 O(K)
+
+    但一次提交後發現空間上成績不太好,可以有些優化空間. 
+    改用常數指標紀錄目前的守門員 (第K近是多近) , 然後 heap 可以直接作為答案. 不必重新建構 
+    
+
+    複雜度 : 時間複雜度 O(NlogK) , 空間 O(K)
 
     Trade-off :
 
 """
 
 from typing import List
+from heapq import heappop , heappush 
+from math import pow
 
+from collections import namedtuple 
 
+# Solution 1 , 直覺的做法
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
-        pass
+
+        heap = [] 
+
+        for point in points : 
+
+            x = point[0]
+            y = point[1]
+            # 既然大家都要開根號 , 那就省掉這一步驟
+            distance_to_origin =  pow(x,2)+pow(y,2) 
+
+            # 如果 Heap 大小目前小於 K , 就直接塞
+            if len(heap) < k : 
+                heappush( heap , ( -1 * distance_to_origin , ( x,y ) ) )
+                continue
+
+            # 如果已經大於K了 , 就先檢查頂端(距離原點剛好第K遠)的點是否比當前這個更近 
+            # 如果當前節點更接近原點 , 則 pop -> push 
+            if  -1 * heap[0][0] > distance_to_origin : 
+                heappop(heap)
+                heappush(heap ,( -1 * distance_to_origin , ( x,y ) ) ) 
+        
+        # 最後Heap內的就是前K個最接近的節點
+
+        results = [] 
+        for _ , coordinate in heap : 
+            results.append([coordinate[0] , coordinate[1]])
+        
+        return results 
+
 
 
 def canon(points):

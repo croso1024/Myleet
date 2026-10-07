@@ -32,22 +32,50 @@
     add 最多被呼叫 10^4 次
 
     思路 :
+    看起來直接維護一個Heap就可以處理. 而且只需要回傳第K高. 不必回傳完整排序序列.
+    因此 Heap 可以只設置為大小K , 保持所有插入操作的時間複雜度為 O(logK) , 空間為 O(K) 
 
-    複雜度 : Time O(?) / Space O(?)
+    複雜度 :
+    - 時間複雜度 O(logK) 
+    - 空間複雜度 O(K)
 
     Trade-off :
 
 """
 
+from multiprocessing import Value
 from typing import List
-
-
+from heapq import heappop , heappush
 class KthLargest:
+
     def __init__(self, k: int, nums: List[int]):
-        pass
+        self.heap = [] 
+        self.maximum_size = k
+        self.current_size = 0   
+
+        # pre-fill heap
+        for num in nums : 
+            self.add(num)
+    
+    def _heap_top(self) -> int :
+        if self.current_size == 0 : 
+            raise ValueError("Heap is empty") 
+        return self.heap[0]
 
     def add(self, val: int) -> int:
-        pass
+        
+        if self.current_size < self.maximum_size: 
+            heappush(self.heap , val) 
+            self.current_size += 1 
+        
+        # 當 Heap 大小滿了 , 檢查新值有沒有大於 Kth , 有的話就塞入
+        elif val > self._heap_top()  :  
+            heappop(self.heap) 
+            heappush(self.heap,val) 
+        
+        # 回傳 heap 頂端 , 也就是 Kth 
+        return self._heap_top()
+
 
 
 def run(ops, args):

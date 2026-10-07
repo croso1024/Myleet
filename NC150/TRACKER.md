@@ -162,9 +162,9 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| — | `KthLargestElementInAStream_703` | [Kth Largest Element In a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | 🟩 Easy | `easy/Kth Largest Element in a Stream.py`📝 | ☐ | ☐ | ☐ | ☐ |
-| — | `LastStoneWeight_1046` | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/) | 🟩 Easy | `easy/Last Stone Weight.py`📝 | ☐ | ☐ | ☐ | ☐ |
-| — | `KClosestPointsToOrigin_973` | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | 🟨 Med | `medium/K Closest Points to Origin.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `KthLargestElementInAStream_703` | [Kth Largest Element In a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | 🟩 Easy | `easy/Kth Largest Element in a Stream.py`📝 | ☑ | ☐ | ☐ | ☑ |
+| — | `LastStoneWeight_1046` | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/) | 🟩 Easy | `easy/Last Stone Weight.py`📝 | ☑ | ☐ | ☐ | ☑ |
+| — | `KClosestPointsToOrigin_973` | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | 🟨 Med | `medium/K Closest Points to Origin.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `KthLargestElementInAnArray_215` | [Kth Largest Element In An Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | 🟨 Med | `medium/Kth Largest Element in an Array.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `TaskScheduler_621` | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | 🟨 Med | `medium/Task Scheduler.py`📝 | ☑ | ☐ | ☐ | ☐ |
 | — | `DesignTwitter_355` | [Design Twitter](https://leetcode.com/problems/design-twitter/) | 🟨 Med | `medium/Design Twitter.py`📝 | ☐ | ☐ | ☐ | ☐ |
