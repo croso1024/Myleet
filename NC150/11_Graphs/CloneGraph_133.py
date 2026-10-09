@@ -30,14 +30,25 @@
     圖是連通的,從給定節點可以走到每一個節點
 
     思路 :
+    這一題實際上給的輸入為 node , 而不是 adjacency list , 
+    而直覺上這題和 Copy Linked List 很像 , 
+    需要走訪一次所有節點 , 複製一個節點Copy , 
+    
+    Given all nodes in the graph are unique. 
+    這一題的細節就剩下對使用的節點的把控 , 要正確的用複製品/正品
 
-    複雜度 : Time O(?) / Space O(?)
+
+    複雜度 : 
+    時間複雜度 / 空間複雜度為 O(N)
+
+    
+
 
     Trade-off :
 
 """
 
-from typing import List, Optional
+from typing import List, Optional , Dict 
 
 
 class Node:
@@ -48,7 +59,41 @@ class Node:
 
 class Solution:
     def cloneGraph(self, node: "Optional[Node]") -> "Optional[Node]":
-        pass
+        if node is None : return None
+
+        # Store the clone node 
+        clone_node_map : Dict[int , Node] = {}
+        def copy(node : Node) -> Node : return Node(val = node.val)
+
+        # DFS / BFS , use DFS here . 
+        # Given at lease one node.
+        # Use copy map as visited set 
+        stack = [node] 
+        head = copy(node) 
+        clone_node_map[node.val] = head 
+
+        while stack : 
+
+            cur = stack.pop() 
+
+            for neighbor in cur.neighbors : 
+                # 已經出現在複製Map當中的 , 就不再尋訪.且不用複製
+                if neighbor.val in clone_node_map : 
+                    pass 
+                
+                # 第一次看到的節點就要複製一顆 ,　然後丟回 DFS ,
+                else : 
+                    clone = copy(neighbor) 
+                    clone_node_map[neighbor.val] = clone 
+
+                    # stack 內部是放原始節點, 原始節點才有 Edge 
+                    stack.append(neighbor)  
+
+                # 無論是否是第一次看到的 , 都需要將複製品接回去
+                # cur 必然已經出現在 clone map , 需要將 clone map 裡對應 cur 的那顆節點也串接上複製好的 neighbor
+                clone_node_map[cur.val].neighbors.append(clone_node_map[neighbor.val]) 
+        
+        return head 
 
 
 def build(adj: List[List[int]]) -> Optional[Node]:
