@@ -236,14 +236,14 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| — | `ClimbingStairs_70` | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | 🟩 Easy | `TOP150Review/Climbing Stairs.py` +1 | ☐ | ☐ | ☐ | ☐ |
+| — | `ClimbingStairs_70` | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | 🟩 Easy | `TOP150Review/Climbing Stairs.py` +1 | ☑ | ☐ | ☐ | ☑ |
 | — | `MinCostClimbingStairs_746` | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) | 🟩 Easy | `easy/Min Cost Climbing Stairs.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `HouseRobber_198` | [House Robber](https://leetcode.com/problems/house-robber/) | 🟨 Med | `medium/House Robber.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `HouseRobberII_213` | [House Robber II](https://leetcode.com/problems/house-robber-ii/) | 🟨 Med | `medium/House Robber II.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `LongestPalindromicSubstring_5` | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | 🟨 Med | `medium/Longest Palindromic Substring.js`📝 +5 | ☐ | ☐ | ☐ | ☐ |
 | — | `PalindromicSubstrings_647` | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | 🟨 Med | `medium/Palindromic Substrings.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | — | `DecodeWays_91` | [Decode Ways](https://leetcode.com/problems/decode-ways/) | 🟨 Med | `medium/Decode Ways.py`📝 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `CoinChange_322` | [Coin Change](https://leetcode.com/problems/coin-change/) | 🟨 Med | `medium/CoinChange.py` +3 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `CoinChange_322` | [Coin Change](https://leetcode.com/problems/coin-change/) | 🟨 Med | `medium/CoinChange.py` +3 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `MaximumProductSubarray_152` | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | 🟨 Med | `medium/Maximum Product Subarray.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `WordBreak_139` | [Word Break](https://leetcode.com/problems/word-break/) | 🟨 Med | `medium/Word Break.js`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `LongestIncreasingSubsequence_300` | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | 🟨 Med | `medium/Longest Increasing Subsequence.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |
@@ -274,7 +274,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | **P0** | `MaximumSubarray_53` | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | 🟨 Med | `medium/Maximum Subarray.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
-| **P0** | `JumpGame_55` | [Jump Game](https://leetcode.com/problems/jump-game/) | 🟨 Med | `medium/Jump_Game.py` +2 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `JumpGame_55` | [Jump Game](https://leetcode.com/problems/jump-game/) | 🟨 Med | `medium/Jump_Game.py` +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `JumpGameII_45` | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | 🟨 Med | `TOP150Review/Jump Game II.py` | ☐ | ☐ | ☐ | ☐ |
 | P1 | `GasStation_134` | [Gas Station](https://leetcode.com/problems/gas-station/) | 🟨 Med | `medium/Gas Station.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `HandOfStraights_846` | [Hand of Straights](https://leetcode.com/problems/hand-of-straights/) | 🟨 Med | `medium/Hand of Straights.py` | ☐ | ☐ | ☐ | ☐ |

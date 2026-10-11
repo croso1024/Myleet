@@ -16,8 +16,13 @@
     0 <= nums[i] <= 10^5
 
     思路 :
+    每一步應該都可以記錄下當前最高可以到達的步數.
+    依據題目給的範例; 
+    step 0 : 最遠可以到2 , 
+    step 1 : 最遠可以到4 , 
+    也就是在走的過程持續更新目前可以抵達的最遠位置. 
+    如果能全部走完則完成, 時間複雜度 O(N) , 空間O(1)
 
-    複雜度 : Time O(?) / Space O(?)
 
     Trade-off :
 
@@ -28,7 +33,13 @@ from typing import List
 
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
-        pass
+        maximum_index_can_reach = 0 
+        current_index = 0 
+        while current_index <= maximum_index_can_reach : 
+            maximum_index_can_reach = max(maximum_index_can_reach , current_index + nums[current_index]) 
+            if maximum_index_can_reach >= len(nums) - 1 : return True 
+            current_index += 1 
+        return False 
 
 
 if __name__ == "__main__":
