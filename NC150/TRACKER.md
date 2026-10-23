@@ -204,7 +204,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | **P0** | `NumberOfIslands_200` | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | 🟨 Med | `medium/Number of Islands.js`📝 +2 | ☑ | ☐ | ☐ | ☑ |
-| — | `MaxAreaOfIsland_695` | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
+| — | `MaxAreaOfIsland_695` | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☑ |
 | P1 | `CloneGraph_133` | [Clone Graph](https://leetcode.com/problems/clone-graph/) | 🟨 Med | `medium/Clone Graph.js`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | — | `WallsAndGates_286` | [Walls And Gates](https://leetcode.com/problems/walls-and-gates/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `RottingOranges_994` | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | 🟨 Med | `medium/Rotting Oranges.py`📝 | ☑ | ☐ | ☐ | ☑ |
@@ -237,7 +237,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | — | `ClimbingStairs_70` | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | 🟩 Easy | `TOP150Review/Climbing Stairs.py` +1 | ☑ | ☐ | ☐ | ☑ |
-| — | `MinCostClimbingStairs_746` | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) | 🟩 Easy | `easy/Min Cost Climbing Stairs.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `MinCostClimbingStairs_746` | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) | 🟩 Easy | `easy/Min Cost Climbing Stairs.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `HouseRobber_198` | [House Robber](https://leetcode.com/problems/house-robber/) | 🟨 Med | `medium/House Robber.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `HouseRobberII_213` | [House Robber II](https://leetcode.com/problems/house-robber-ii/) | 🟨 Med | `medium/House Robber II.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `LongestPalindromicSubstring_5` | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | 🟨 Med | `medium/Longest Palindromic Substring.js`📝 +5 | ☐ | ☐ | ☐ | ☐ |
