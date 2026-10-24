@@ -211,7 +211,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | P1 | `PacificAtlanticWaterFlow_417` | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | 🟨 Med | `medium/Pacific Atlantic Water Flow.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `SurroundedRegions_130` | [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) | 🟨 Med | `medium/Surrounded Regions.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `CourseSchedule_207` | [Course Schedule](https://leetcode.com/problems/course-schedule/) | 🟨 Med | `medium/Course Schedule.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `CourseScheduleII_210` | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | 🟨 Med | `medium/Course Schedule II.py`📝 +2 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `CourseScheduleII_210` | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | 🟨 Med | `medium/Course Schedule II.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `GraphValidTree_261` | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
 | — | `NumberOfConnectedComponentsInAnUndirectedGraph_323` | [Number of Connected Components In An Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `RedundantConnection_684` | [Redundant Connection](https://leetcode.com/problems/redundant-connection/) | 🟨 Med | `medium/Redundant Connection.py`📝 | ☐ | ☐ | ☐ | ☐ |
@@ -239,7 +239,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `ClimbingStairs_70` | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | 🟩 Easy | `TOP150Review/Climbing Stairs.py` +1 | ☑ | ☐ | ☐ | ☑ |
 | — | `MinCostClimbingStairs_746` | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) | 🟩 Easy | `easy/Min Cost Climbing Stairs.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `HouseRobber_198` | [House Robber](https://leetcode.com/problems/house-robber/) | 🟨 Med | `medium/House Robber.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
-| — | `HouseRobberII_213` | [House Robber II](https://leetcode.com/problems/house-robber-ii/) | 🟨 Med | `medium/House Robber II.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `HouseRobberII_213` | [House Robber II](https://leetcode.com/problems/house-robber-ii/) | 🟨 Med | `medium/House Robber II.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `LongestPalindromicSubstring_5` | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | 🟨 Med | `medium/Longest Palindromic Substring.js`📝 +5 | ☐ | ☐ | ☐ | ☐ |
 | — | `PalindromicSubstrings_647` | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | 🟨 Med | `medium/Palindromic Substrings.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | — | `DecodeWays_91` | [Decode Ways](https://leetcode.com/problems/decode-ways/) | 🟨 Med | `medium/Decode Ways.py`📝 | ☐ | ☐ | ☐ | ☐ |

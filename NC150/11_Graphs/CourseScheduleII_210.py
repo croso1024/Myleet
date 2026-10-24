@@ -24,6 +24,15 @@
     每一對先修關係都不重複
 
     思路 :
+    這一題用BFS, 同時記錄下每一門課的相依課程數. 只有所有先修都完成的,才能加入修習.
+    同時需要一個Array把修習紀錄加入陣列. 
+    如果全部都能修完就回傳該陣列,否則回傳空陣列. 
+
+    時間複雜度 , 設課程數為N : 
+    - 建構修課關係圖 , 已知 Prerequisites 為 N^2 , 需要 O(N^2) 時間建圖
+    - 紀錄每一堂課的相依關係 (修完後可以修哪些) , Worse Case O(N^2) 空間 
+    - BFS 開始修課 , O(N)時間
+
 
     複雜度 : Time O(?) / Space O(?)
 
@@ -31,12 +40,46 @@
 
 """
 
-from typing import List
-
+from typing import List,Dict,Set
+from collections import deque
 
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
-        pass
+        
+        # prerequisites_map : { course_i : [ course that require course_i ] }
+        # prerequisites_count : {course_i : amount of prerequest course }
+        prerequisites_map : Dict[int , Set[int]] = {} 
+        prerequisites_count : Dict[int , int] = {} 
+        
+        # bi 修完才能修 ai 
+        for ai , bi in prerequisites : 
+
+            if bi not in prerequisites_map : prerequisites_map[bi] = set() 
+            prerequisites_map[bi].add(ai) 
+
+            if ai not in prerequisites_count : prerequisites_count[ai] = 0 
+            prerequisites_count[ai] += 1 
+        
+        # BFS , 只能從沒有任何先修的開始上
+        
+        queue = deque([i for i in range(numCourses) if i not in prerequisites_count])
+        course_path = [] 
+
+        while queue : 
+            # 可以上的課程
+            course = queue.popleft()
+            course_path.append(course) 
+            # 看一下能解鎖哪些課程
+            # 如果某堂課的先修全部完成了 , 就可以加入待修清單
+            for next_course in prerequisites_map.get(course,[]): 
+                if prerequisites_count[next_course] == 1 : 
+                    del prerequisites_count[next_course]
+                    queue.append(next_course)
+                else : 
+                    prerequisites_count[next_course] -= 1 
+        
+        # 如果所有課程都能修的到 , 就回傳修課軌跡,否則回傳空Array 
+        return course_path if len(course_path) == numCourses else [] 
 
 
 def is_valid_order(num_courses, prerequisites, order):

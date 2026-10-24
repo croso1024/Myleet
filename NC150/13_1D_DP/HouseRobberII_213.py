@@ -18,6 +18,18 @@
     0 <= nums[i] <= 1000
 
     思路 :
+    這一題相較一版,把房子串接起來. 
+    看起來可以當作版本一, 只是是求 
+
+    max(
+        houseRobberI(nums[:-1]),
+        houseRobberI(nums[1:]),
+    )
+    但更合理的做法不應該是這樣. 要先思考 DP 狀態要記什麼.
+    第一版先做 houseRobberI 的解答, 需要 O(N) 時間+ O(1)空間
+
+
+
 
     複雜度 : Time O(?) / Space O(?)
 
@@ -27,11 +39,23 @@
 
 from typing import List
 
-
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        pass
-
+        def house_robber_1(nums:List[int]): 
+            if len(nums) <= 2 : return max(nums)
+            prev_1 = max(nums[0], nums[1]) 
+            prev_2 = nums[0]
+            maximum = max(prev_1 , prev_2)
+            for i  in range(2,len(nums)) : 
+                maximum = max(maximum , prev_2 + nums[i] , prev_1)
+                prev_2 , prev_1 = prev_1 , maximum
+            return maximum
+            
+        if len(nums) <= 2 : return max(nums) 
+        return max(
+            house_robber_1(nums[:-1]) , 
+            house_robber_1(nums[1:]) , 
+        )
 
 if __name__ == "__main__":
     c = Solution()
