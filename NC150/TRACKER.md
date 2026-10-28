@@ -255,8 +255,8 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| **P0** | `UniquePaths_62` | [Unique Paths](https://leetcode.com/problems/unique-paths/) | 🟨 Med | `medium/Unique Paths.py`📝 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `LongestCommonSubsequence_1143` | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | 🟨 Med | `medium/Longest Common Subsequence.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `UniquePaths_62` | [Unique Paths](https://leetcode.com/problems/unique-paths/) | 🟨 Med | `medium/Unique Paths.py`📝 | ☑ | ☐ | ☐ | ☑ |
+| **P0** | `LongestCommonSubsequence_1143` | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | 🟨 Med | `medium/Longest Common Subsequence.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `BestTimeToBuyAndSellStockWithCooldown_309` | [Best Time to Buy And Sell Stock With Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) | 🟨 Med | `medium/Best Time to Buy and Sell Stock with Cooldown.js`📝 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `CoinChangeII_518` | [Coin Change II](https://leetcode.com/problems/coin-change-ii/) | 🟨 Med | `medium/Coin Change II.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | — | `TargetSum_494` | [Target Sum](https://leetcode.com/problems/target-sum/) | 🟨 Med | `medium/Target Sum.py`📝 | ☐ | ☐ | ☐ | ☐ |
