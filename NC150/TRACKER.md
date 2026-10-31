@@ -206,7 +206,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | **P0** | `NumberOfIslands_200` | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | 🟨 Med | `medium/Number of Islands.js`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `MaxAreaOfIsland_695` | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☑ |
 | P1 | `CloneGraph_133` | [Clone Graph](https://leetcode.com/problems/clone-graph/) | 🟨 Med | `medium/Clone Graph.js`📝 +1 | ☐ | ☐ | ☐ | ☐ |
-| — | `WallsAndGates_286` | [Walls And Gates](https://leetcode.com/problems/walls-and-gates/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
+| — | `WallsAndGates_286` | [Walls And Gates](https://leetcode.com/problems/walls-and-gates/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `RottingOranges_994` | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | 🟨 Med | `medium/Rotting Oranges.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `PacificAtlanticWaterFlow_417` | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | 🟨 Med | `medium/Pacific Atlantic Water Flow.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `SurroundedRegions_130` | [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) | 🟨 Med | `medium/Surrounded Regions.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
@@ -241,7 +241,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | **P0** | `HouseRobber_198` | [House Robber](https://leetcode.com/problems/house-robber/) | 🟨 Med | `medium/House Robber.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `HouseRobberII_213` | [House Robber II](https://leetcode.com/problems/house-robber-ii/) | 🟨 Med | `medium/House Robber II.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `LongestPalindromicSubstring_5` | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | 🟨 Med | `medium/Longest Palindromic Substring.js`📝 +5 | ☑ | ☐ | ☐ | ☑ |
-| — | `PalindromicSubstrings_647` | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | 🟨 Med | `medium/Palindromic Substrings.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
+| — | `PalindromicSubstrings_647` | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | 🟨 Med | `medium/Palindromic Substrings.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | — | `DecodeWays_91` | [Decode Ways](https://leetcode.com/problems/decode-ways/) | 🟨 Med | `medium/Decode Ways.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `CoinChange_322` | [Coin Change](https://leetcode.com/problems/coin-change/) | 🟨 Med | `medium/CoinChange.py` +3 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `MaximumProductSubarray_152` | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | 🟨 Med | `medium/Maximum Product Subarray.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |

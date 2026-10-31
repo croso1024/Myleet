@@ -35,8 +35,16 @@
     rooms[i][j] 是 -1、0 或 2^31 - 1
 
     思路 :
+    這一題直覺上就是一個擴散。題目要的是每一個空房間到達最近一扇門的距離。
+    而且是要直接修改棋盤格
+    沒有辦法到達的就維持原樣. 
 
-    複雜度 : Time O(?) / Space O(?)
+    直覺上走分層的BFS , 第一輪從所有門開始走.
+    可以往四面八方走,但不能走到已經走過的空房間和牆壁。 
+    同時記錄當前BFS的輪數,作為走到空房間時填入步數的標準. 
+
+    複雜度 : 
+    走BFS , 時間複雜度為棋盤格總大小 O(N) , 空間複雜度在 worse case (所有房間都是門,第一輪BFS爆滿) 的情況下也為 O(N)
 
     Trade-off :
 
@@ -44,14 +52,48 @@
 
 import copy
 from typing import List
-
+from collections import deque
 
 INF = 2147483647
 
 
 class Solution:
     def wallsAndGates(self, rooms: List[List[int]]) -> None:
-        pass
+        
+        DIRS = [(-1,0),(1,0),(0,1),(0,-1)] 
+        m , n = len(rooms)  , len(rooms[0])
+
+        queue = deque() 
+        visited = set() 
+        step = 0 
+
+        # 首先第一輪是把所有門都加入 deque , 再開始走BFS 
+        for i in range(m):
+            for j in range(n): 
+                if rooms[i][j] == 0 : 
+                    queue.append((i,j))
+                    visited.add((i,j)) 
+
+        # 開始走 BFS , 同時紀錄步數.
+
+        while queue: 
+
+            size = len(queue) 
+            step += 1 
+            # 這一輪只能走 size 步 
+            for _ in range(size): 
+
+                x , y = queue.popleft() 
+                # 開始走四面八方,只要是空房間 (INF) 就能加入
+                for dx , dy in DIRS : 
+                    nx , ny = x + dx , y + dy 
+                    # 在不超出棋盤格的情況下,如果走到空房間,就加入 queue 準備走下一輪,同時將當前步數紀錄進去
+                    if 0 <= nx < m and 0 <= ny < n and rooms[nx][ny] == INF and (nx,ny) not in visited : 
+                        queue.append((nx,ny)) 
+                        visited.add((nx,ny)) 
+                        rooms[nx][ny] = step 
+        
+        return 
 
 
 if __name__ == "__main__":
