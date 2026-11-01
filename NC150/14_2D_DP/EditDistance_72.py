@@ -16,31 +16,10 @@
     word1 與 word2 只含小寫英文字母
 
     思路 :
-    dp[i][j] 定義成「word1 的前 i 個字,變成 word2 的前 j 個字,最少要幾次操作」。
-    和 1143 一樣是雙序列的表,差別在格子裡放的是代價,不是長度。
 
-    邊界先填:
-    dp[i][0] = i,把 word1 的前 i 個字刪光。
-    dp[0][j] = j,從空字串插入 word2 的前 j 個字。
-
-    內部每一格看 word1[i-1] 和 word2[j-1]:
-    - 兩個字相同,不用操作,直接沿對角線拿 dp[i-1][j-1]。
-    - 不同,三種操作都試一次,取最小再加 1:
-      刪掉 word1 這個字 -> dp[i-1][j]
-      插入 word2 這個字 -> dp[i][j-1]
-      把 word1 這個字換成 word2 的 -> dp[i-1][j-1]
-
-    1143 不相等時是取左、上的 max。
-    這裡不相等時是三種操作的 min 再加一;相等時不付代價,只沿對角線。
-
-    複雜度 :
-    時間複雜度 O(m * n),表上每一格算一次。
-    空間複雜度 O(m * n)。
+    複雜度 : Time O(?) / Space O(?)
 
     Trade-off :
-    轉移只看上一列和這一列的左邊,可以壓成兩列,甚至一列加一個對角暫存,
-    空間降到 O(min(m, n))。
-    這輪先留完整的表,和 1143 的格子對照時比較不會搞混索引。
 
 """
 
@@ -48,7 +27,6 @@
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
         m, n = len(word1), len(word2)
-        # dp[i][j]: word1 前 i 個字 -> word2 前 j 個字的最少操作數
         dp = [[0] * (n + 1) for _ in range(m + 1)]
 
         for i in range(m + 1):
@@ -61,10 +39,11 @@ class Solution:
                 if word1[i - 1] == word2[j - 1]:
                     dp[i][j] = dp[i - 1][j - 1]
                 else:
-                    delete_one = dp[i - 1][j]
-                    insert_one = dp[i][j - 1]
-                    replace_one = dp[i - 1][j - 1]
-                    dp[i][j] = 1 + min(delete_one, insert_one, replace_one)
+                    dp[i][j] = 1 + min(
+                        dp[i - 1][j],
+                        dp[i][j - 1],
+                        dp[i - 1][j - 1],
+                    )
 
         return dp[m][n]
 
