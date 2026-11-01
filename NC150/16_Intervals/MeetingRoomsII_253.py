@@ -28,24 +28,12 @@
 
 """
 
-import heapq
 from typing import List
 
 
 class Solution:
     def minMeetingRooms(self, intervals: List[List[int]]) -> int:
-        if not intervals:
-            return 0
-
-        ordered = sorted(intervals, key=lambda interval: interval[0])
-        free_at = []
-
-        for start, end in ordered:
-            if free_at and free_at[0] <= start:
-                heapq.heappop(free_at)
-            heapq.heappush(free_at, end)
-
-        return len(free_at)
+        pass
 
 
 if __name__ == "__main__":

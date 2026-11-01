@@ -28,20 +28,7 @@ from typing import List
 
 class Solution:
     def canPartition(self, nums: List[int]) -> bool:
-        total = sum(nums)
-        if total % 2 == 1:
-            return False
-
-        target = total // 2
-        dp = [False] * (target + 1)
-        dp[0] = True
-
-        for num in nums:
-            for amount in range(target, num - 1, -1):
-                if dp[amount - num]:
-                    dp[amount] = True
-
-        return dp[target]
+        pass
 
 
 if __name__ == "__main__":

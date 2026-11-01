@@ -38,28 +38,10 @@ from typing import List
 
 class Solution:
     def encode(self, strs: List[str]) -> str:
-        encoded = []
-        for s in strs:
-            encoded.append(str(len(s)))
-            encoded.append("#")
-            encoded.append(s)
-        return "".join(encoded)
+        pass
 
     def decode(self, s: str) -> List[str]:
-        result = []
-        i = 0
-        n = len(s)
-
-        while i < n:
-            length_end = i
-            while s[length_end] != "#":
-                length_end += 1
-            length = int(s[i:length_end])
-            i = length_end + 1
-            result.append(s[i:i + length])
-            i += length
-
-        return result
+        pass
 
 
 if __name__ == "__main__":
