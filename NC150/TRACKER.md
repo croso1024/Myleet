@@ -263,7 +263,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `InterleavingString_97` | [Interleaving String](https://leetcode.com/problems/interleaving-string/) | 🟨 Med | `medium/Interleaving String.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `LongestIncreasingPathInAMatrix_329` | [Longest Increasing Path In a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
 | — | `DistinctSubsequences_115` | [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `EditDistance_72` | [Edit Distance](https://leetcode.com/problems/edit-distance/) | 🟨 Med | `medium/Edit Distance.py`📝 +3 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `EditDistance_72` | [Edit Distance](https://leetcode.com/problems/edit-distance/) | 🟨 Med | `medium/Edit Distance.py`📝 +3 | ☑ | ☐ | ☐ | ☑ |
 | — | `BurstBalloons_312` | [Burst Balloons](https://leetcode.com/problems/burst-balloons/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
 | — | `RegularExpressionMatching_10` | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
 
