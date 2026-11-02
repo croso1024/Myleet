@@ -17,8 +17,26 @@
     -10^4 <= nums[i] <= 10^4
 
     思路 :
+    
+    這一題的關鍵應該是該如何定義 DP 狀態 , dp[i] 要表示什麼? 
+    用 dp[i] 表達 , 以 nums[i] 結尾的子陣列的單調遞增最大值為多少,那解答就是在Traverse過程中找到的最大值. 
+    以此定義去描述,那可以怎樣推導出狀態轉移!? 
 
-    複雜度 : Time O(?) / Space O(?)
+    dp[i] 是以 nums[i] 為結尾的最大子陣列單調遞增數 , 
+    但要填入 dp[i] 時 , 要看的應該是 nums 在 i 之前,所有小於 nums[i] 的值對應的nums[j] 對應的 dp[j] , 找出 dp[j] 最大的 +1 就是 dp[i]
+
+    以原題 [ 10 9 2 5 3 7 101 18 ]
+    10 : 第一格值固定為1 
+    9 : 往前找有沒有 < 9 的 , 沒有就 1 
+    2 : 往前找有沒有 <2 的 ,沒有就1 
+    5 : 往前找有沒有 <5 的 , 從所有小於5的對應的 dp[j] 找最大的 + 1
+    3 : 往前找有沒有 <3 的 , 從所有小於5的對應的 dp[j] 找最大的 + 1
+    ... 
+    
+    複雜度 : 
+    這個解法的時間複雜度就是 O(N^2) , 空間複雜度 O(N)
+
+    follow up 要求 O( N Log N ) 級別的解法,我的理解是在往前看搜索時要有更快的方式
 
     Trade-off :
 
@@ -29,7 +47,18 @@ from typing import List
 
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
-        pass
+        
+        dp = [None for _ in range(len(nums))]
+        dp[0] = 1 
+
+        for i in range(1,len(nums)) : 
+
+            # current index = i , 
+            # handle dp[i] 
+            # 找出所有小於 nums[i] 的 nums[j] 內 dp[j] 最大的 + 1 就是 dp[i]
+            dp[i] = max([ dp[j] for j in range(i) if nums[j] < nums[i] ] + [0])  + 1  
+        
+        return max(dp)
 
 
 if __name__ == "__main__":
