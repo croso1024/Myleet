@@ -59,7 +59,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | **P0** | `TwoSum_1` | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟩 Easy | `easy/Two Sum.py` +1 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `GroupAnagrams_49` | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | 🟨 Med | `medium/GroupAnagrams.py` +2 | ☑ | ☐ | ☐ | ☐ |
 | — | `TopKFrequentElements_347` | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | 🟨 Med | `medium/Top K Frequent Elements.py`📝 | ☑ | ☐ | ☐ | ☐ |
-| P1 | `EncodeAndDecodeStrings_271` | [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
+| P1 | `EncodeAndDecodeStrings_271` | [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `ProductOfArrayExceptSelf_238` | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | 🟨 Med | `medium/Product_of_Array_Except_Self.py` +1 | ☑ | ☐ | ☐ | ☑ |
 | — | `ValidSudoku_36` | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | 🟨 Med | `medium/Valid_Sudoku.py` +2 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `LongestConsecutiveSequence_128` | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | 🟨 Med | `medium/Longest Consecutive Sequence.js` +1 | ☑ | ☐ | ☐ | ☑ |
@@ -276,7 +276,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | **P0** | `MaximumSubarray_53` | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | 🟨 Med | `medium/Maximum Subarray.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `JumpGame_55` | [Jump Game](https://leetcode.com/problems/jump-game/) | 🟨 Med | `medium/Jump_Game.py` +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `JumpGameII_45` | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | 🟨 Med | `TOP150Review/Jump Game II.py` | ☐ | ☐ | ☐ | ☐ |
-| P1 | `GasStation_134` | [Gas Station](https://leetcode.com/problems/gas-station/) | 🟨 Med | `medium/Gas Station.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| P1 | `GasStation_134` | [Gas Station](https://leetcode.com/problems/gas-station/) | 🟨 Med | `medium/Gas Station.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `HandOfStraights_846` | [Hand of Straights](https://leetcode.com/problems/hand-of-straights/) | 🟨 Med | `medium/Hand of Straights.py` | ☐ | ☐ | ☐ | ☐ |
 | — | `MergeTripletsToFormTargetTriplet_1899` | [Merge Triplets to Form Target Triplet](https://leetcode.com/problems/merge-triplets-to-form-target-triplet/) | 🟨 Med | `medium/Merge Triplets to Form Target Triplet.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `PartitionLabels_763` | [Partition Labels](https://leetcode.com/problems/partition-labels/) | 🟨 Med | `medium/Partition Labels.py`📝 | ☐ | ☐ | ☐ | ☐ |
@@ -292,7 +292,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | **P0** | `MergeIntervals_56` | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | 🟨 Med | `TOP150Review/Merge Intervals.py` +1 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `NonOverlappingIntervals_435` | [Non Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | 🟨 Med | `medium/Non-overlapping Intervals.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `MeetingRooms_252` | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | 🟩 Easy | — | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `MeetingRoomsII_253` | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `MeetingRoomsII_253` | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☑ |
 | — | `MinimumIntervalToIncludeEachQuery_1851` | [Minimum Interval to Include Each Query](https://leetcode.com/problems/minimum-interval-to-include-each-query/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
 
 ## 17. Math & Geometry · 8 題 · W8
