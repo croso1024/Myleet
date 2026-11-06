@@ -258,7 +258,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | **P0** | `UniquePaths_62` | [Unique Paths](https://leetcode.com/problems/unique-paths/) | 🟨 Med | `medium/Unique Paths.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `LongestCommonSubsequence_1143` | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | 🟨 Med | `medium/Longest Common Subsequence.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `BestTimeToBuyAndSellStockWithCooldown_309` | [Best Time to Buy And Sell Stock With Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) | 🟨 Med | `medium/Best Time to Buy and Sell Stock with Cooldown.js`📝 | ☐ | ☐ | ☐ | ☐ |
-| P1 | `CoinChangeII_518` | [Coin Change II](https://leetcode.com/problems/coin-change-ii/) | 🟨 Med | `medium/Coin Change II.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
+| P1 | `CoinChangeII_518` | [Coin Change II](https://leetcode.com/problems/coin-change-ii/) | 🟨 Med | `medium/Coin Change II.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | — | `TargetSum_494` | [Target Sum](https://leetcode.com/problems/target-sum/) | 🟨 Med | `medium/Target Sum.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `InterleavingString_97` | [Interleaving String](https://leetcode.com/problems/interleaving-string/) | 🟨 Med | `medium/Interleaving String.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `LongestIncreasingPathInAMatrix_329` | [Longest Increasing Path In a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
@@ -290,7 +290,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | P1 | `InsertInterval_57` | [Insert Interval](https://leetcode.com/problems/insert-interval/) | 🟨 Med | `medium/Insert Interval.js`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `MergeIntervals_56` | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | 🟨 Med | `TOP150Review/Merge Intervals.py` +1 | ☑ | ☐ | ☐ | ☑ |
-| P1 | `NonOverlappingIntervals_435` | [Non Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | 🟨 Med | `medium/Non-overlapping Intervals.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| P1 | `NonOverlappingIntervals_435` | [Non Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | 🟨 Med | `medium/Non-overlapping Intervals.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `MeetingRooms_252` | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | 🟩 Easy | — | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `MeetingRoomsII_253` | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☑ |
 | — | `MinimumIntervalToIncludeEachQuery_1851` | [Minimum Interval to Include Each Query](https://leetcode.com/problems/minimum-interval-to-include-each-query/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
