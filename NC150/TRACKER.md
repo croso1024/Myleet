@@ -288,7 +288,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| P1 | `InsertInterval_57` | [Insert Interval](https://leetcode.com/problems/insert-interval/) | 🟨 Med | `medium/Insert Interval.js`📝 +1 | ☐ | ☐ | ☐ | ☐ |
+| P1 | `InsertInterval_57` | [Insert Interval](https://leetcode.com/problems/insert-interval/) | 🟨 Med | `medium/Insert Interval.js`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `MergeIntervals_56` | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | 🟨 Med | `TOP150Review/Merge Intervals.py` +1 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `NonOverlappingIntervals_435` | [Non Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | 🟨 Med | `medium/Non-overlapping Intervals.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `MeetingRooms_252` | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | 🟩 Easy | — | ☐ | ☐ | ☐ | ☐ |

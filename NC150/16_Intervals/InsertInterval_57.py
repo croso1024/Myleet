@@ -29,7 +29,12 @@
     不重疊這件事就徹底消除了下一段區間的 start 會不會落在前一段區間之內的問題.
     現在要插入一段新區間. 我的想法是定位新區間的 start / end 會分別影響到原有的哪些區間.
 
-    應該可以用兩次 Binary Search 去找到新區間的影響範圍
+    應該可以用兩次 Binary Search 去找到新區間的影響範圍.
+
+    後續解法二 , 與Claude討論並得到意見後, 找到關鍵是要理解新區間與既有排序且不重疊的舊區間.
+    必然是 "完全不重疊在左側 / 重疊 / 完全不重疊在右側" 的關係,並用三階段處理.
+
+    時間複雜度 O(N) N 為區間數 , 空間複雜度為 O(N) (建構解的輔助空間)
 
 
 
@@ -45,12 +50,12 @@ class Solution:
     def insert(
         self, intervals: List[List[int]], newInterval: List[int]
     ) -> List[List[int]]:
-        if not intervals : return newInterval
+        if not intervals : return [newInterval]
 
         if newInterval[1] < intervals[0][0] : 
-            return newInterval + intervals
+            return [newInterval] + intervals
         elif newInterval[0] > intervals[-1][1] : 
-            return intervals + newInterval
+            return intervals + [newInterval]
         
         new_start , new_end = newInterval
         result = []
@@ -59,15 +64,24 @@ class Solution:
         inserted = False
         
         for i in range(len(intervals)): 
-            # print(f"Round : {i} result : {result} , hook : {hook}")
 
             start,end = intervals[i] 
-            if inserted : result.append([start,end])
+            if inserted : 
+                result.append([start,end])
+                continue
 
-            # 判斷與 new interval 是否有重疊. 
+
+            # 判斷與 new interval 是否有重疊 
+            
+            # hook還不存在,當前區間與新區間不重疊 (分成在新區間左側或右側)
             if hook is None and not ( start <= new_end and new_start <= end ) : 
-                # 沒有重疊 , 且 hook 為空就直接 append 
-                result.append([start,end]) 
+                # 若新區間完全在當前區間左側
+                if new_end < start :
+                    result.append([new_start,new_end])
+                    inserted = True
+
+                result.append([start,end])
+
             # hook 目前是空的 , 但有重疊發生, 則設置好 Hook , 且為重疊區間繼續迭代
             elif hook is None : 
                 hook = ( min(start , new_start) , max(end,new_end)) 
@@ -87,6 +101,44 @@ class Solution:
             result.append([hook[0],hook[1]])
 
         return result
+    
+
+# 解法二 : 從 Claude 給的線索中歸結
+class Solution:
+    def insert(
+        self, intervals: List[List[int]], newInterval: List[int]
+    ) -> List[List[int]]:
+        
+        result = [] 
+        size = len(intervals) 
+        new_start , new_end = newInterval
+        i = 0 
+
+        # 所有區間因為已經按照 start 排序 ,且不重疊. 
+        # 因此對於一個新區間 [s,e] , 既有區間只可能是 : 完全在左側不重疊 / 重疊 / 完全在右側不重疊.
+
+        # 第一段 , 所有區間結束位置小於 new start 的都可以直接加入了
+        while i < size and intervals[i][1] < new_start  : 
+            result.append(intervals[i]) 
+            i += 1 
+        
+        # 第二段,這時候可能會有重疊發生,發生的話就收進待插入的新區間
+        while i < size and intervals[i][0] <= new_end : 
+            new_start = min(intervals[i][0] , new_start)
+            new_end = max(intervals[i][1] , new_end) 
+            i += 1 
+        
+        # 出來之後把新區間插入 , 如果後面還有區間就補完
+        result.append([new_start , new_end])
+
+        while i < size : 
+            result.append(intervals[i])
+            i += 1 
+
+        return result 
+
+
+
 
 
 if __name__ == "__main__":
@@ -121,6 +173,7 @@ if __name__ == "__main__":
         ),
         ([[1, 5], [6, 8]], [0, 9], [[0, 9]], "新區間蓋過全部"),
         ([[3, 5], [6, 9]], [1, 2], [[1, 2], [3, 5], [6, 9]], "插到最前面且沒有碰到"),
+        ([[2,4],[5,7],[8,10],[11,13]],[3,6] , [[2,7],[8,10],[11,13]] ,"第一次LeetCode提交 - 失敗測資")
     ]
 
     for intervals, new_interval, expected, note in test_set:
