@@ -25,6 +25,13 @@
     0 <= start <= end <= 10^5
 
     思路 :
+    已知題目給定的區間都已經按照 start 進行了升序排列且彼此不重疊，把這個事實畫在圖紙上來對照
+    不重疊這件事就徹底消除了下一段區間的 start 會不會落在前一段區間之內的問題.
+    現在要插入一段新區間. 我的想法是定位新區間的 start / end 會分別影響到原有的哪些區間.
+
+    應該可以用兩次 Binary Search 去找到新區間的影響範圍
+
+
 
     複雜度 : Time O(?) / Space O(?)
 
@@ -34,12 +41,52 @@
 
 from typing import List
 
-
 class Solution:
     def insert(
         self, intervals: List[List[int]], newInterval: List[int]
     ) -> List[List[int]]:
-        pass
+        if not intervals : return newInterval
+
+        if newInterval[1] < intervals[0][0] : 
+            return newInterval + intervals
+        elif newInterval[0] > intervals[-1][1] : 
+            return intervals + newInterval
+        
+        new_start , new_end = newInterval
+        result = []
+        
+        hook = None
+        inserted = False
+        
+        for i in range(len(intervals)): 
+            # print(f"Round : {i} result : {result} , hook : {hook}")
+
+            start,end = intervals[i] 
+            if inserted : result.append([start,end])
+
+            # 判斷與 new interval 是否有重疊. 
+            if hook is None and not ( start <= new_end and new_start <= end ) : 
+                # 沒有重疊 , 且 hook 為空就直接 append 
+                result.append([start,end]) 
+            # hook 目前是空的 , 但有重疊發生, 則設置好 Hook , 且為重疊區間繼續迭代
+            elif hook is None : 
+                hook = ( min(start , new_start) , max(end,new_end)) 
+            
+            # hook 存在 , 比較新區間有沒有要跟 Hook 合併 , 若有 , 則繼續擴大hook , 沒有則可以將 hook 貼進並把剩下的回傳了
+            elif  end >= hook[0] and start <= hook[1] : 
+                hook = ( min(start , hook[0]) , max(end,hook[1]))  
+            
+            else : 
+                result.append([hook[0],hook[1]]) 
+                result.append([start,end])
+                inserted = True
+            
+            # print(f"After Round{i} : results {result} hook : {hook}")
+
+        if not inserted  and hook is not None : 
+            result.append([hook[0],hook[1]])
+
+        return result
 
 
 if __name__ == "__main__":

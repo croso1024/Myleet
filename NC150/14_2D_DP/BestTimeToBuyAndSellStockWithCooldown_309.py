@@ -18,19 +18,64 @@
     0 <= prices[i] <= 1000
 
     思路 :
+    直覺上需要記住幾條不同情境下的最大獲利陣列.
+    - 第i天手上持有股票的情況下的最大獲利
+    - 第i天手上沒有股票的情況下的最大獲利 (這也是答案所在) 
+    
+    再分別解析這兩種情況怎算,考慮到題目規定賣完隔天不能買 , 這表示第i天要持有股票 , 那 i-1 天不可能賣掉股票
 
-    複雜度 : Time O(?) / Space O(?)
+    - 第 i 天手上持有股票的最大獲利 = max(
+        第 (i-2) 天沒有股票的最大獲利 - 第i天的股票價格,  
+        第 (i-1) 天持有股票的最大獲利 
+        )
+    - 第 i 天手上沒有股票的最大獲利 = max(
+        第 (i-1) 天沒有股票的最大獲利 , 
+        第 (i-1) 天有股票的最大獲利 + 第i天的股票價格 
+    )
+    每一輪迭代,都需要往前看兩格. 所以初始條件需要給定兩格. 
+
+
+    時間複雜度為 O(N) , 空間則為 O(N) , 這一題可以做空間壓縮進一步拉到 O(1) 
 
     Trade-off :
 
 """
 
 from typing import List
-
-
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        pass
+
+        if len(prices) == 1 : return 0 
+        
+        # let dp[i][j] :  i 表示天數 , j=0表示沒拿股票 , j=1 表示有拿股票
+        dp = [ [None , None] for i in range(len(prices)) ]
+
+        # Given len(prices) >= 1 
+        # 第一天沒拿股票最大獲利是0 , 有拿的話變成 -1 * prices[0]
+        dp[0][0] = 0 
+        dp[0][1] = -1 * prices[0]  
+
+        # 考慮前看兩格, 這邊直接處理 dp[1] 的狀況. 
+        dp[1][0] = max(dp[0][0] , dp[0][1] + prices[1]) 
+        dp[1][1] = max(dp[0][1] , dp[0][0] - prices[1])
+
+        # 接著開始走 loop 
+
+        for day in range(2 , len(prices)):
+
+            dp[day][0] = max(
+                dp[day-1][0] , 
+                dp[day-1][1] + prices[day]
+            )
+            dp[day][1] = max(
+                dp[day-1][1] , 
+                dp[day-2][0] - prices[day]
+            )
+        
+        # 最終結果就是到最後一天 , 沒有股票的最大獲利
+        return dp[len(prices)-1][0]
+
+
 
 
 if __name__ == "__main__":

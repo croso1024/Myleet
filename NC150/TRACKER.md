@@ -245,7 +245,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `DecodeWays_91` | [Decode Ways](https://leetcode.com/problems/decode-ways/) | 🟨 Med | `medium/Decode Ways.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `CoinChange_322` | [Coin Change](https://leetcode.com/problems/coin-change/) | 🟨 Med | `medium/CoinChange.py` +3 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `MaximumProductSubarray_152` | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | 🟨 Med | `medium/Maximum Product Subarray.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
-| P1 | `WordBreak_139` | [Word Break](https://leetcode.com/problems/word-break/) | 🟨 Med | `medium/Word Break.js`📝 +1 | ☐ | ☐ | ☐ | ☐ |
+| P1 | `WordBreak_139` | [Word Break](https://leetcode.com/problems/word-break/) | 🟨 Med | `medium/Word Break.js`📝 +1 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `LongestIncreasingSubsequence_300` | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | 🟨 Med | `medium/Longest Increasing Subsequence.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `PartitionEqualSubsetSum_416` | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | 🟨 Med | `medium/Partition Equal Subset Sum.py`📝 | ☐ | ☐ | ☐ | ☐ |
 
@@ -257,7 +257,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | **P0** | `UniquePaths_62` | [Unique Paths](https://leetcode.com/problems/unique-paths/) | 🟨 Med | `medium/Unique Paths.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `LongestCommonSubsequence_1143` | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | 🟨 Med | `medium/Longest Common Subsequence.py`📝 | ☑ | ☐ | ☐ | ☑ |
-| P1 | `BestTimeToBuyAndSellStockWithCooldown_309` | [Best Time to Buy And Sell Stock With Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) | 🟨 Med | `medium/Best Time to Buy and Sell Stock with Cooldown.js`📝 | ☐ | ☐ | ☐ | ☐ |
+| P1 | `BestTimeToBuyAndSellStockWithCooldown_309` | [Best Time to Buy And Sell Stock With Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) | 🟨 Med | `medium/Best Time to Buy and Sell Stock with Cooldown.js`📝 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `CoinChangeII_518` | [Coin Change II](https://leetcode.com/problems/coin-change-ii/) | 🟨 Med | `medium/Coin Change II.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | — | `TargetSum_494` | [Target Sum](https://leetcode.com/problems/target-sum/) | 🟨 Med | `medium/Target Sum.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `InterleavingString_97` | [Interleaving String](https://leetcode.com/problems/interleaving-string/) | 🟨 Med | `medium/Interleaving String.py`📝 | ☐ | ☐ | ☐ | ☐ |
