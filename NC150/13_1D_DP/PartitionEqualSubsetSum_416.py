@@ -16,11 +16,6 @@
     1 <= nums[i] <= 100
 
     思路 :
-    這一題給出只能切一刀，能不能切出一刀讓兩邊大小相等的結果。
-    在每一個元素有兩個選擇枝的情況下 , 暴力展開就是 2^200 , 
-
-    想法上 , 先做 Sorted , 再嘗試走訪 , 假想將刀切在走訪位置 , 去算兩邊是否能平衡
-    時間複雜度為 O(NLogN)  Sorting , 空間為 O(1)
 
     複雜度 : Time O(?) / Space O(?)
 
@@ -33,20 +28,7 @@ from typing import List
 
 class Solution:
     def canPartition(self, nums: List[int]) -> bool:
-        
-        sorted_nums = sorted(nums) 
-
-        left = 0 
-        right = sum(sorted_nums) 
-
-        if left == right : return True 
-
-        for i in range(len(sorted_nums)): 
-            left += sorted_nums[i] 
-            right -= sorted_nums[i] 
-            if left == right : return True
-        
-        return  False 
+        pass
 
 
 
