@@ -23,6 +23,11 @@
     給定的圖是連通的
 
     思路 :
+    這一題是找出那條 , 要加上之前,要連接的兩塊就已經互相連通的情況. 
+    題目給定的範例1, 就符合多條可刪,但要刪掉最後一條要加的.
+    而題目也給定 , 這張圖本來就是所有節點都相連,因此只有一條是多餘的 ( N個節點至少 N-1 條邊才能全連接 , 不可能發生 2 條都是多餘的 , 只會發生多餘的1條可以有不同選擇)
+
+    這一題走 Union-Find 標準模板,即可解 時間 O(N) , 空間 O(N)
 
     複雜度 : Time O(?) / Space O(?)
 
@@ -33,9 +38,58 @@
 from typing import List
 
 
+class UnionFind : 
+
+    # 配合節點是由編號 1 ~ n , index-0 就不使用
+    def __init__(self,n : int): 
+
+        self.union_root = [ i for i in range( n + 1  )] 
+        self.union_size = [1 for i in range(n+1)]
+
+    # 做路徑壓縮 
+    def find(self,x : int): 
+
+        parent = self.union_root[x] 
+        while parent != self.union_root[parent] : 
+
+            self.union_root[parent] = self.union_root[ self.union_root[parent] ]
+            parent = self.union_root[parent]
+        
+        return parent
+    
+    def union(self,p : int , q : int):
+        
+        root_p = self.find(p)
+        root_q = self.find(q) 
+
+        if root_p == root_q : return 
+
+        if self.union_size[root_p] > self.union_size[root_q] : 
+            self.union_root[root_q] = root_p 
+            self.union_size[root_p] += self.union_size[root_q]
+        
+        else : 
+            self.union_root[root_p] = root_q 
+            self.union_size[root_q] += self.union_size[root_p] 
+
+
+    def is_connected(self , p: int , q:int) : 
+        
+        return self.find(p) == self.find(q)
+
+
+
 class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
-        pass
+        
+        # 這一題要的 , 就是找出第一組 , 在加入 edges 發現兩個目標早已經連通的狀況 : 
+        # Given N = len(edges) 
+        union_find = UnionFind(n = len(edges))  
+        for ai , bi in edges : 
+            if union_find.is_connected(ai,bi) : 
+                return [ai,bi] 
+            union_find.union(ai,bi) 
+        return -1 
 
 
 if __name__ == "__main__":

@@ -20,6 +20,8 @@
     除了一個元素只出現一次,其餘每個元素都剛好出現兩次
 
     思路 :
+    這一題的問題應該怎樣只使用常數大小的額外空間. 如果可以使用線性空間,就直接 HashTable 處理掉即可.
+    但不確定所謂的常數大小是甚麼? 如果是結合值域, 那數字在  -30000 <= nums[i] <= 30000 , 那就可以用一個數值域來處理沒錯
 
     複雜度 : Time O(?) / Space O(?)
 
@@ -32,7 +34,30 @@ from typing import List
 
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        pass
+
+        offset = 30000 
+        bitarray = [0 for i in range(30000*2+1)] 
+
+        for num in nums : 
+
+            index = num + offset 
+            if bitarray[index] == 1 : bitarray[index] = 0 
+            else : bitarray[index] = 1 
+        
+        # 完成之後看 bitarray 第一個 1 出現在哪,扣掉offset 
+        return bitarray.index(1) - offset 
+    
+
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        
+
+        acc = 0 
+        for num in nums : 
+            acc = acc ^ num 
+        
+        return acc 
+
 
 
 if __name__ == "__main__":

@@ -213,8 +213,8 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | **P0** | `CourseSchedule_207` | [Course Schedule](https://leetcode.com/problems/course-schedule/) | 🟨 Med | `medium/Course Schedule.py`📝 +2 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `CourseScheduleII_210` | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | 🟨 Med | `medium/Course Schedule II.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `GraphValidTree_261` | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
-| — | `NumberOfConnectedComponentsInAnUndirectedGraph_323` | [Number of Connected Components In An Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `RedundantConnection_684` | [Redundant Connection](https://leetcode.com/problems/redundant-connection/) | 🟨 Med | `medium/Redundant Connection.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `NumberOfConnectedComponentsInAnUndirectedGraph_323` | [Number of Connected Components In An Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☑ |
+| **P0** | `RedundantConnection_684` | [Redundant Connection](https://leetcode.com/problems/redundant-connection/) | 🟨 Med | `medium/Redundant Connection.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `WordLadder_127` | [Word Ladder](https://leetcode.com/problems/word-ladder/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
 
 ## 12. Advanced Graphs · 6 題 · W5
@@ -279,7 +279,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | P1 | `GasStation_134` | [Gas Station](https://leetcode.com/problems/gas-station/) | 🟨 Med | `medium/Gas Station.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `HandOfStraights_846` | [Hand of Straights](https://leetcode.com/problems/hand-of-straights/) | 🟨 Med | `medium/Hand of Straights.py` | ☐ | ☐ | ☐ | ☐ |
 | — | `MergeTripletsToFormTargetTriplet_1899` | [Merge Triplets to Form Target Triplet](https://leetcode.com/problems/merge-triplets-to-form-target-triplet/) | 🟨 Med | `medium/Merge Triplets to Form Target Triplet.py`📝 | ☐ | ☐ | ☐ | ☐ |
-| P1 | `PartitionLabels_763` | [Partition Labels](https://leetcode.com/problems/partition-labels/) | 🟨 Med | `medium/Partition Labels.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| P1 | `PartitionLabels_763` | [Partition Labels](https://leetcode.com/problems/partition-labels/) | 🟨 Med | `medium/Partition Labels.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `ValidParenthesisString_678` | [Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string/) | 🟨 Med | `medium/Valid Parenthesis String.py`📝 | ☐ | ☐ | ☐ | ☐ |
 
 ## 16. Intervals · 6 題 · W7
@@ -316,7 +316,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| **P0** | `SingleNumber_136` | [Single Number](https://leetcode.com/problems/single-number/) | 🟩 Easy | `easy/Single Number.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `SingleNumber_136` | [Single Number](https://leetcode.com/problems/single-number/) | 🟩 Easy | `easy/Single Number.py`📝 | ☑ | ☐ | ☐ | ☐ |
 | — | `NumberOf1Bits_191` | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | 🟩 Easy | `TOP150Review/Number of 1 Bits.py` | ☐ | ☐ | ☐ | ☐ |
 | P1 | `CountingBits_338` | [Counting Bits](https://leetcode.com/problems/counting-bits/) | 🟩 Easy | `easy/Counting Bits.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `ReverseBits_190` | [Reverse Bits](https://leetcode.com/problems/reverse-bits/) | 🟩 Easy | `easy/Reverse Bits.py` | ☐ | ☐ | ☐ | ☐ |
