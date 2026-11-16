@@ -247,7 +247,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | P1 | `MaximumProductSubarray_152` | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | 🟨 Med | `medium/Maximum Product Subarray.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `WordBreak_139` | [Word Break](https://leetcode.com/problems/word-break/) | 🟨 Med | `medium/Word Break.js`📝 +1 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `LongestIncreasingSubsequence_300` | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | 🟨 Med | `medium/Longest Increasing Subsequence.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
-| **P0** | `PartitionEqualSubsetSum_416` | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | 🟨 Med | `medium/Partition Equal Subset Sum.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `PartitionEqualSubsetSum_416` | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | 🟨 Med | `medium/Partition Equal Subset Sum.py`📝 | ☑ | ☐ | ☐ | ☐ |
 
 ## 14. 2-D Dynamic Programming · 11 題 · W6
 
@@ -302,7 +302,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | P1 | `RotateImage_48` | [Rotate Image](https://leetcode.com/problems/rotate-image/) | 🟨 Med | `medium/Rotate_Image.py` +1 | ☐ | ☐ | ☐ | ☐ |
-| **P0** | `SpiralMatrix_54` | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | 🟨 Med | `medium/Spiral Matrix.py` +2 | ☐ | ☐ | ☐ | ☐ |
+| **P0** | `SpiralMatrix_54` | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | 🟨 Med | `medium/Spiral Matrix.py` +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `SetMatrixZeroes_73` | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | 🟨 Med | `medium/Set Matrix Zeroes.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | — | `HappyNumber_202` | [Happy Number](https://leetcode.com/problems/happy-number/) | 🟩 Easy | `easy/Happy Number.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `PlusOne_66` | [Plus One](https://leetcode.com/problems/plus-one/) | 🟩 Easy | `easy/PlusOne.py` | ☐ | ☐ | ☐ | ☐ |
