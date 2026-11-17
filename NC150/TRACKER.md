@@ -212,7 +212,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `SurroundedRegions_130` | [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) | 🟨 Med | `medium/Surrounded Regions.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `CourseSchedule_207` | [Course Schedule](https://leetcode.com/problems/course-schedule/) | 🟨 Med | `medium/Course Schedule.py`📝 +2 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `CourseScheduleII_210` | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | 🟨 Med | `medium/Course Schedule II.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
-| — | `GraphValidTree_261` | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
+| — | `GraphValidTree_261` | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☐ |
 | — | `NumberOfConnectedComponentsInAnUndirectedGraph_323` | [Number of Connected Components In An Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `RedundantConnection_684` | [Redundant Connection](https://leetcode.com/problems/redundant-connection/) | 🟨 Med | `medium/Redundant Connection.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `WordLadder_127` | [Word Ladder](https://leetcode.com/problems/word-ladder/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
@@ -244,7 +244,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `PalindromicSubstrings_647` | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | 🟨 Med | `medium/Palindromic Substrings.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | — | `DecodeWays_91` | [Decode Ways](https://leetcode.com/problems/decode-ways/) | 🟨 Med | `medium/Decode Ways.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `CoinChange_322` | [Coin Change](https://leetcode.com/problems/coin-change/) | 🟨 Med | `medium/CoinChange.py` +3 | ☑ | ☐ | ☐ | ☑ |
-| P1 | `MaximumProductSubarray_152` | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | 🟨 Med | `medium/Maximum Product Subarray.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
+| P1 | `MaximumProductSubarray_152` | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | 🟨 Med | `medium/Maximum Product Subarray.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `WordBreak_139` | [Word Break](https://leetcode.com/problems/word-break/) | 🟨 Med | `medium/Word Break.js`📝 +1 | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `LongestIncreasingSubsequence_300` | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | 🟨 Med | `medium/Longest Increasing Subsequence.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `PartitionEqualSubsetSum_416` | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | 🟨 Med | `medium/Partition Equal Subset Sum.py`📝 | ☑ | ☐ | ☐ | ☐ |
@@ -301,12 +301,12 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| P1 | `RotateImage_48` | [Rotate Image](https://leetcode.com/problems/rotate-image/) | 🟨 Med | `medium/Rotate_Image.py` +1 | ☐ | ☐ | ☐ | ☐ |
+| P1 | `RotateImage_48` | [Rotate Image](https://leetcode.com/problems/rotate-image/) | 🟨 Med | `medium/Rotate_Image.py` +1 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `SpiralMatrix_54` | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | 🟨 Med | `medium/Spiral Matrix.py` +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `SetMatrixZeroes_73` | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | 🟨 Med | `medium/Set Matrix Zeroes.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
 | — | `HappyNumber_202` | [Happy Number](https://leetcode.com/problems/happy-number/) | 🟩 Easy | `easy/Happy Number.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `PlusOne_66` | [Plus One](https://leetcode.com/problems/plus-one/) | 🟩 Easy | `easy/PlusOne.py` | ☐ | ☐ | ☐ | ☐ |
-| P1 | `PowXN_50` | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | 🟨 Med | `TOP150Review/Pow(x, n).py` | ☐ | ☐ | ☐ | ☐ |
+| P1 | `PowXN_50` | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | 🟨 Med | `TOP150Review/Pow(x, n).py` | ☑ | ☐ | ☐ | ☑ |
 | — | `MultiplyStrings_43` | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | 🟨 Med | `easy/Multiply_Strings.py` | ☐ | ☐ | ☐ | ☐ |
 | — | `DetectSquares_2013` | [Detect Squares](https://leetcode.com/problems/detect-squares/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
 

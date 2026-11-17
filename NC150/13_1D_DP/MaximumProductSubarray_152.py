@@ -18,7 +18,27 @@
 
     思路 :
 
-    複雜度 : Time O(?) / Space O(?)
+    直覺看上去是 1D DP , 狀態與選擇是甚麼? 
+    思路是 :  假設以 nums[i] 為入選子陣列最後一個元素 ,那麼其可構成的子陣列最大值為 : max(nums[i] , nums[i] * 以前一個元素收尾的連續子陣列最大乘積 )
+    因為子陣列不能拆 , 不是子集. 
+
+    以這個想法就能寫出狀態轉移 : 
+    dp[i] = max( nums[i] , dp[i-1] * nums[i] ) , 搭配狀態壓縮與 hook 來記最大值. 
+    以上, 僅這樣寫會卡在 [-2,-3,-4] / [2,3,-2,4,-1] 這一種先取小,後面有機會更大的題目. 
+
+    ===
+    所以需要思考, 考慮到乘法的特性 ,要正確推出以 i 結尾的子陣列最大值. 還需要甚麼? 
+    我的想法是還需要記最小值 , 因為最小值有可能下一輪被翻成最大值. 
+    每一輪同時要記住以 i 結尾子陣列的"最小 & 最大"
+
+    故本身要記住的是 prev_max / prev_min 
+    cur_max = max( nums[i] , nums[i] * prev_max , nums[i] * prev_min )
+    cur_min = min( nums[i] , nums[i] * prev_max , nums[i] * prev_min )
+    而最佳解來自最好的 cur_max 
+
+    
+    時間複雜度 O(N) , 
+    空間複雜度 O(1)
 
     Trade-off :
 
@@ -29,7 +49,20 @@ from typing import List
 
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
-        pass
+        
+        biggest_multiple_sum = nums[0] 
+        prev_max = nums[0]
+        prev_min = nums[0]
+        for i in range(1 , len(nums)) : 
+
+            cur_max = max( nums[i] , nums[i] * prev_max , nums[i] * prev_min ) 
+            cur_min = min( nums[i] , nums[i] * prev_max , nums[i] * prev_min )
+            
+            biggest_multiple_sum = max(biggest_multiple_sum , cur_max ) 
+            prev_max = cur_max 
+            prev_min = cur_min 
+        
+        return biggest_multiple_sum
 
 
 if __name__ == "__main__":
