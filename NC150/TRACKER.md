@@ -223,7 +223,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
-| P1 | `NetworkDelayTime_743` | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
+| P1 | `NetworkDelayTime_743` | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☑ |
 | — | `ReconstructItinerary_332` | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
 | — | `MinCostToConnectAllPoints_1584` | [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/) | 🟨 Med | `medium/Min Cost to Connect All Points.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `SwimInRisingWater_778` | [Swim In Rising Water](https://leetcode.com/problems/swim-in-rising-water/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
@@ -318,7 +318,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | **P0** | `SingleNumber_136` | [Single Number](https://leetcode.com/problems/single-number/) | 🟩 Easy | `easy/Single Number.py`📝 | ☑ | ☐ | ☐ | ☐ |
 | — | `NumberOf1Bits_191` | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | 🟩 Easy | `TOP150Review/Number of 1 Bits.py` | ☐ | ☐ | ☐ | ☐ |
-| P1 | `CountingBits_338` | [Counting Bits](https://leetcode.com/problems/counting-bits/) | 🟩 Easy | `easy/Counting Bits.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| P1 | `CountingBits_338` | [Counting Bits](https://leetcode.com/problems/counting-bits/) | 🟩 Easy | `easy/Counting Bits.py`📝 | ☑ | ☐ | ☐ | ☐ |
 | — | `ReverseBits_190` | [Reverse Bits](https://leetcode.com/problems/reverse-bits/) | 🟩 Easy | `easy/Reverse Bits.py` | ☐ | ☐ | ☐ | ☐ |
 | — | `MissingNumber_268` | [Missing Number](https://leetcode.com/problems/missing-number/) | 🟩 Easy | `easy/Missing Number.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `SumOfTwoIntegers_371` | [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |

@@ -14,10 +14,60 @@
     n = 2 -> [0,1,1]
     n = 5 -> [0,1,1,2,1,2]
 
+    n = 0 0
+    n = 1 1
+    n = 2 10
+    n = 3 11 
+    n = 4 100
+    n = 5 101
+    n = 6 110
+    n = 7 111
+    n = 8 1000
+    n = 9 1001
+    n = 10 1010
+    n = 11 1011
+    n = 12 1100
+    n = 13 1101
+    n = 14 1110
+    n = 15 1111
+
+
     Constraint :
     0 <= n <= 10^5
 
     思路 :
+    這題要的是 0 ~ n 每一個數字的二進位表示法有幾個 1 出現. 
+    且 n 在 10000 量級內. 
+
+    看起來是可以 1D DP 推上去. 
+    假設已知 dp[i] 是數字為 i 的二進位表示法有多少個 1 , 
+    那麼 i+1 的二進位表示法有幾個 1 ? 
+
+    列出整張表,看規律, n 在 2 的冪次上必然是1 
+    除此之外 , 規則為 : 
+    dp[i+1] = dp[i] + 1 if i % 2 == 0 else dp[i] 
+
+    === 上述解法 , 在 n = 12 有錯 , n=12只有2個1 , n=11有3個
+
+    正確的推導狀態應該是 : 
+    n = 0 => 0
+    n = 1 ,開根號等於 1
+    n = 2 , 1
+    n = 3  : n:2 + n:1
+
+    n = 8 => 1
+    n = 9 => 1001 => n:8 + n:1
+
+
+    n = 12 => n:8 + n:4 的數量.
+    n = 13 => n:8 + n:4 + n:1 = 3 == n:8 + n:5 
+
+    n = 15 => n:8 + n:7
+
+    n = 13 開根號等於 3.x , 等於 8 , 再加上表上一個已經有的值 5
+    n = 24 : 11000 = 16 + 8 
+    n = 27 : 11011 = 16 + 8 + 3 = 16 + 11  
+
 
     複雜度 : Time O(?) / Space O(?)
 
@@ -26,11 +76,62 @@
 """
 
 from typing import List
+from math import log2 , floor
 
 
 class Solution:
     def countBits(self, n: int) -> List[int]:
-        pass
+
+        # 填入初始值
+        results = [ 0 ]
+        if n == 0 : return results 
+        results.append(1)
+        if n == 1 : return results 
+
+        for i in range(2,n+1):
+            if i & (i-1) == 0 : 
+                results.append(1)
+                continue
+            # 將數字先開根號,取整
+            k = floor(log2(i)) 
+            # print(f"I : {i} , results : {results} , k = {k}")
+            # 將 k 與該數字相減就知道要參考那個值
+            # k 表達該數字首位在 2 的多少冪次 , 下一步則是從表上去找補數
+            cur = results[ pow(2,k) ] + results[i - pow(2,k)] 
+            results.append(cur)
+        return results
+
+
+# 優化版 
+
+
+class Solution:
+    def countBits(self, n: int) -> List[int]:
+
+        # 填入初始值
+        results = [0]
+
+        # k 表示當前走到的最高位是哪一位. 
+        # e.g  n = 3 : 11 , 當前最高位 2  , n = 4 : 100 當前最高位 = 3
+
+        k = 0
+
+
+        for i in range(1,n+1):
+            if i & (i-1) == 0 : 
+                results.append(1)
+                k += 1 
+                continue
+            # 將 k 與該數字相減就知道要參考那個值
+            # k 表達該數字首位在 2 的多少冪次 , 下一步則是從表上去找補數
+
+            # 每一個數字如果不是 2 的冪次 , 那就是用其當前最高位次 (而且必然為1) , 然後補上差值,差值已經算好
+            cur = 1 + results[i - pow(2,k)] 
+            results.append(cur)
+        return results
+
+
+
 
 
 def first_mismatch(result, expected):
