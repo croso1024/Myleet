@@ -215,7 +215,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `GraphValidTree_261` | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☐ |
 | — | `NumberOfConnectedComponentsInAnUndirectedGraph_323` | [Number of Connected Components In An Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `RedundantConnection_684` | [Redundant Connection](https://leetcode.com/problems/redundant-connection/) | 🟨 Med | `medium/Redundant Connection.py`📝 | ☑ | ☐ | ☐ | ☑ |
-| P1 | `WordLadder_127` | [Word Ladder](https://leetcode.com/problems/word-ladder/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
+| P1 | `WordLadder_127` | [Word Ladder](https://leetcode.com/problems/word-ladder/) | 🟥 Hard | — | ☑ | ☐ | ☐ | ☐ |
 
 ## 12. Advanced Graphs · 6 題 · W5
 
@@ -259,7 +259,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | **P0** | `LongestCommonSubsequence_1143` | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | 🟨 Med | `medium/Longest Common Subsequence.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `BestTimeToBuyAndSellStockWithCooldown_309` | [Best Time to Buy And Sell Stock With Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) | 🟨 Med | `medium/Best Time to Buy and Sell Stock with Cooldown.js`📝 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `CoinChangeII_518` | [Coin Change II](https://leetcode.com/problems/coin-change-ii/) | 🟨 Med | `medium/Coin Change II.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
-| — | `TargetSum_494` | [Target Sum](https://leetcode.com/problems/target-sum/) | 🟨 Med | `medium/Target Sum.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `TargetSum_494` | [Target Sum](https://leetcode.com/problems/target-sum/) | 🟨 Med | `medium/Target Sum.py`📝 | ☑ | ☐ | ☐ | ☐ |
 | — | `InterleavingString_97` | [Interleaving String](https://leetcode.com/problems/interleaving-string/) | 🟨 Med | `medium/Interleaving String.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | — | `LongestIncreasingPathInAMatrix_329` | [Longest Increasing Path In a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
 | — | `DistinctSubsequences_115` | [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
@@ -291,7 +291,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | P1 | `InsertInterval_57` | [Insert Interval](https://leetcode.com/problems/insert-interval/) | 🟨 Med | `medium/Insert Interval.js`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `MergeIntervals_56` | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | 🟨 Med | `TOP150Review/Merge Intervals.py` +1 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `NonOverlappingIntervals_435` | [Non Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | 🟨 Med | `medium/Non-overlapping Intervals.py`📝 | ☑ | ☐ | ☐ | ☑ |
-| — | `MeetingRooms_252` | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | 🟩 Easy | — | ☐ | ☐ | ☐ | ☐ |
+| — | `MeetingRooms_252` | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | 🟩 Easy | — | ☑ | ☐ | ☐ | ☐ |
 | **P0** | `MeetingRoomsII_253` | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☑ |
 | — | `MinimumIntervalToIncludeEachQuery_1851` | [Minimum Interval to Include Each Query](https://leetcode.com/problems/minimum-interval-to-include-each-query/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
 
@@ -331,5 +331,5 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | 優先 | 檔名主幹 | 題目 | 難度 | 舊解 | Py | Java | TS | 複雜度 |
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | **P0** | `LowestCommonAncestorOfABinaryTree_236` | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | 🟨 Med | `medium/Lowest Common Ancestor of a Binary Tree.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
-| P1 | `InsertDeleteGetRandomO1_380` | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | 🟨 Med | `medium/Insert Delete GetRandom O(1).py`📝 | ☐ | ☐ | ☐ | ☐ |
+| P1 | `InsertDeleteGetRandomO1_380` | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | 🟨 Med | `medium/Insert Delete GetRandom O(1).py`📝 | ☑ | ☐ | ☐ | ☑ |
 
