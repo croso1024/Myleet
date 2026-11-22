@@ -25,8 +25,23 @@
     1 <= n <= 2^31 - 1
 
     思路 :
+    按照題目意思,如果把數字拆開後 , 各自平方加總的數值不斷經過此過程會到達一,那就是Happy Number ,
+    如果不會並且陷入循環就不是. 
 
-    複雜度 : Time O(?) / Space O(?)
+    直覺得做法 , 就是按照題目的流程 , 把給定的數字做拆解與平方和 , 並記錄到一個曾經算過的 table , 如果某個數字在過程中循環了,就能判斷不是 Happy Number , 
+    否則就做到循環或著停在1為止
+
+    複雜度 : 
+    已知 n <= 2^31 : 那大概也只有 1024^3 * 2 最多 10 位數 , 極限在 9^2 * 10 => 下一輪就會剩下 3 位數. 
+    空間複雜度就是這個呼叫鍊的長度 , 時間複雜度也等於呼叫鍊長度. 
+
+    第一輪最多 810 , 而在 999 內的數字上限就是 3 x 9^2 = 243 
+    因此,依據鴿籠原理 , 最多243步序列就要馬碰到1或重複.
+    這條呼叫鍊就是有界的. 
+
+
+
+
 
     Trade-off :
 
@@ -35,7 +50,51 @@
 
 class Solution:
     def isHappy(self, n: int) -> bool:
-        pass
+
+        memo = set() 
+        
+        def _divied_and_square_sum( n : int ) : 
+            num_string = str(n) 
+            total_sum = 0 
+            for i in range(len(num_string)): 
+                total_sum +=  pow(int(num_string[i]),2) 
+            return total_sum 
+        
+        while  n != 1  : 
+            memo.add(n) 
+            r = _divied_and_square_sum(n) 
+
+            if r in memo : return False 
+            else : memo.add(r) 
+            n = r 
+        return True 
+
+
+# 快慢指標版本 , 主要就是省下memo的空間
+class Solution:
+    def isHappy(self, n: int) -> bool:
+
+        slow = n 
+        fast = n 
+        
+        def _divied_and_square_sum( n : int ) : 
+            num_string = str(n) 
+            total_sum = 0 
+            for i in range(len(num_string)): 
+                total_sum +=  pow(int(num_string[i]),2) 
+            return total_sum 
+        
+        while n != 1 : 
+
+            slow = _divied_and_square_sum(slow) 
+            fast =  _divied_and_square_sum(_divied_and_square_sum(
+                fast
+            ))
+            # if slow == fast : 有迴圈,無解 : 
+            if fast == 1 : return True 
+            if slow == fast : return False  
+
+        return True         
 
 
 if __name__ == "__main__":

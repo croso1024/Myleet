@@ -303,8 +303,8 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | P1 | `RotateImage_48` | [Rotate Image](https://leetcode.com/problems/rotate-image/) | 🟨 Med | `medium/Rotate_Image.py` +1 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `SpiralMatrix_54` | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | 🟨 Med | `medium/Spiral Matrix.py` +2 | ☑ | ☐ | ☐ | ☑ |
-| — | `SetMatrixZeroes_73` | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | 🟨 Med | `medium/Set Matrix Zeroes.py`📝 +1 | ☐ | ☐ | ☐ | ☐ |
-| — | `HappyNumber_202` | [Happy Number](https://leetcode.com/problems/happy-number/) | 🟩 Easy | `easy/Happy Number.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `SetMatrixZeroes_73` | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | 🟨 Med | `medium/Set Matrix Zeroes.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
+| — | `HappyNumber_202` | [Happy Number](https://leetcode.com/problems/happy-number/) | 🟩 Easy | `easy/Happy Number.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `PlusOne_66` | [Plus One](https://leetcode.com/problems/plus-one/) | 🟩 Easy | `easy/PlusOne.py` | ☐ | ☐ | ☐ | ☐ |
 | P1 | `PowXN_50` | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | 🟨 Med | `TOP150Review/Pow(x, n).py` | ☑ | ☐ | ☐ | ☑ |
 | — | `MultiplyStrings_43` | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | 🟨 Med | `easy/Multiply_Strings.py` | ☐ | ☐ | ☐ | ☐ |
