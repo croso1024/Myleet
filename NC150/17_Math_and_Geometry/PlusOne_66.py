@@ -20,7 +20,17 @@
 
     思路 :
 
-    複雜度 : Time O(?) / Space O(?)
+    我的想法是直接控制這個傳入陣列,用 Pop 檢視陣列尾部. 
+    這樣也可以控制進位數. 
+
+    [1,2,3] , pop 後得到 3,  加 1 變為4 append 回去
+    [1,2,9] , pop 後得到 9 , 遇到9就先存進位 count = 1 , 再 pop 一次遇到2 , 變為3 , 之後再把進位 count 補 0 回去
+    [1,9,9] , pop 後得到 9 , 先存進位 count = 1 , 再 pop 就再存, count = 2 , 再 pop 遇到 1 , =2 之後把 count = 2 補2個0回去
+    [9] , pop 後得到 9 , 先存進位 count = 1 , 此時 pop 不了就先補 1 , 再把 count = 1 補一個0 
+
+    複雜度 :
+
+    上述解法 , 時間複雜度等於 O(N) , 空間複雜度 O(1) 
 
     Trade-off :
 
@@ -31,7 +41,26 @@ from typing import List
 
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-        pass
+        
+
+        count = 0 
+        while len(digits) > 0 : 
+
+            last_digit = digits.pop() 
+
+            if last_digit == 9 : 
+                count += 1 
+            else : 
+                digits.append(last_digit + 1)
+                break 
+        
+        if len(digits) == 0: digits.append(1)
+
+        while count > 0 : 
+            digits.append(0)
+            count -= 1 
+        
+        return digits
 
 
 if __name__ == "__main__":

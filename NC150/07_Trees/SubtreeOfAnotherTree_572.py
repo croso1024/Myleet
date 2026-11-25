@@ -20,6 +20,16 @@
 
     思路 :
 
+    第一個直覺思路是在traverse root的過程中 , 碰到 subRoot 節點後開始紀錄.
+    往下探尋與 subRoot 相同的結構與節點值. 如果全部走完都相同就可以回True , 不是的話就要繼續找. 
+    但這樣的時間複雜度不會好.
+
+    另一種想法是做 in-order/pre-order 這一類遍尋,
+    然後比較 sub-root 子樹排出來的是否與 root 可以排出來的有部分相同. 
+
+    最後想法 , 先對 sub-root 做一次 in-order/pre-order 查訪.得到子樹結構.
+    然後再遞迴的對 root 做一次,在遞回過程中檢查當前結構 in-order / pre-order 是否相同
+
     複雜度 : Time O(?) / Space O(?)
 
     Trade-off :
@@ -27,7 +37,7 @@
 """
 
 from collections import deque
-from typing import List, Optional
+from typing import List, Optional , Tuple 
 
 
 class TreeNode:
@@ -46,7 +56,32 @@ class Solution:
     def isSubtree(
         self, root: Optional[TreeNode], subRoot: Optional[TreeNode]
     ) -> bool:
-        pass
+
+        subtree_inorder = None 
+        subtree_preorder = None
+        subtree_postorder = None 
+        find = False 
+
+        def _recursive_check(node:TreeNode) : 
+            nonlocal find 
+            if find : return [] , [] , [] 
+            if node is None : return [None] , [None]  , [None]
+
+            left_subtree_inorder , left_subtree_preorder , left_subtree_postorder = _recursive_check(node.left) 
+            right_subtree_inorder , right_subtree_preorder , right_subtree_postorder= _recursive_check(node.right) 
+
+            cur_inorder = left_subtree_inorder + [node.val] + right_subtree_inorder 
+            cur_preorder = [node.val] + left_subtree_preorder + right_subtree_preorder 
+            cur_postorder = left_subtree_postorder + right_subtree_postorder + [node.val]
+
+            if cur_inorder == subtree_inorder and cur_preorder == subtree_preorder and cur_postorder == subtree_postorder: 
+                find = True 
+
+            return cur_inorder , cur_preorder , cur_postorder
+
+        subtree_inorder , subtree_preorder , subtree_postorder = _recursive_check(subRoot) 
+        _recursive_check(root) 
+        return find 
 
 
 def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:

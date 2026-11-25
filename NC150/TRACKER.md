@@ -145,7 +145,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `DiameterOfBinaryTree_543` | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | 🟩 Easy | `easy/Diameter of Binary Tree.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `BalancedBinaryTree_110` | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | 🟩 Easy | `easy/Balanced Binary Tree.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `SameTree_100` | [Same Tree](https://leetcode.com/problems/same-tree/) | 🟩 Easy | `easy/Same Tree.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
-| — | `SubtreeOfAnotherTree_572` | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | 🟩 Easy | `easy/Subtree of Another Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `SubtreeOfAnotherTree_572` | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | 🟩 Easy | `easy/Subtree of Another Tree.py`📝 | ☑ | ☐ | ☐ | ☐ |
 | — | `LowestCommonAncestorOfABinarySearchTree_235` | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | 🟨 Med | `medium/Lowest Common Ancestor of a Binary Search Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | **P0** | `BinaryTreeLevelOrderTraversal_102` | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | 🟨 Med | `medium/Binary Tree Level Order Traversal.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `BinaryTreeRightSideView_199` | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | 🟨 Med | `medium/Binary Tree Right Side View.py` +1 | ☑ | ☐ | ☐ | ☑ |
@@ -305,7 +305,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | **P0** | `SpiralMatrix_54` | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | 🟨 Med | `medium/Spiral Matrix.py` +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `SetMatrixZeroes_73` | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | 🟨 Med | `medium/Set Matrix Zeroes.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | — | `HappyNumber_202` | [Happy Number](https://leetcode.com/problems/happy-number/) | 🟩 Easy | `easy/Happy Number.py`📝 | ☑ | ☐ | ☐ | ☑ |
-| — | `PlusOne_66` | [Plus One](https://leetcode.com/problems/plus-one/) | 🟩 Easy | `easy/PlusOne.py` | ☐ | ☐ | ☐ | ☐ |
+| — | `PlusOne_66` | [Plus One](https://leetcode.com/problems/plus-one/) | 🟩 Easy | `easy/PlusOne.py` | ☑ | ☐ | ☐ | ☑ |
 | P1 | `PowXN_50` | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | 🟨 Med | `TOP150Review/Pow(x, n).py` | ☑ | ☐ | ☐ | ☑ |
 | — | `MultiplyStrings_43` | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | 🟨 Med | `easy/Multiply_Strings.py` | ☐ | ☐ | ☐ | ☐ |
 | — | `DetectSquares_2013` | [Detect Squares](https://leetcode.com/problems/detect-squares/) | 🟨 Med | — | ☐ | ☐ | ☐ | ☐ |
