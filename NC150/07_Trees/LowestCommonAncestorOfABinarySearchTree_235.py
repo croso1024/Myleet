@@ -22,6 +22,20 @@
     p 與 q 都存在於 BST 中
 
     思路 :
+    
+    最直覺的想法是兩次 DFS 去找路徑 , 已知 p/q 必然在tree內.
+    那麼 [root ... p ] , [root ... q] 取最小前共同子陣列就是答案. 
+    e.g : 
+    Case.1 [ root , n1 , n2 , p ] , [ root , n1 , q ] , 則 n1 為答案 
+    Case.2 [ root , n1 , n2 , p ] , [ root , n1 , n2 , p ,  q ] , 則 p 為答案. 
+    Case.3 [ p ] , [ p , n1 , q ] , 則 p 為答案 .
+    兩次DFS , 加上路徑紀錄與比對, 時間複雜度 O(N) , 空間O(樹高) 
+    以此做為第一版本解答
+
+    第二種解法 , 應該要利用 BST 的特性 , 
+    給定 node.val , p.val , q.val , 
+    若   p.val < node.val  < q.val , node.val 必然是解.
+    而若是  node.val > p.val / q.val 或反過來 , 只要往其中一邊找
 
     複雜度 : Time O(?) / Space O(?)
 
@@ -50,6 +64,72 @@ class Solution:
         self, root: Optional[TreeNode], p: Optional[TreeNode], q: Optional[TreeNode]
     ) -> Optional[TreeNode]:
         pass
+        path_to_p = None 
+        path_to_q = None 
+
+        def dfs_path(node : Optional[TreeNode] , path : List[int] ): 
+            nonlocal path_to_p , path_to_q 
+            if node is None : return 
+
+            if node.val == p.val : 
+                path.append(p)
+                path_to_p = list(path)
+                path.pop()
+            
+            if node.val == q.val : 
+                path.append(q)
+                path_to_q = list(path)
+                path.pop()
+            
+            if path_to_p and path_to_q : return 
+
+            path.append(node)
+            dfs_path(node.left , path) 
+            dfs_path(node.right , path = path)
+            path.pop() 
+
+            return 
+        dfs_path(root , []) 
+
+
+        # 取回路徑後 , 開始算共同祖先; 
+        i = 0 
+        sol = None 
+        while i < min(len(path_to_p) , len(path_to_q)) :
+
+            v1 : TreeNode = path_to_p[i]
+            v2 : TreeNode = path_to_q[i]
+
+            if v1 == v2 : 
+                sol = v1 
+                i += 1
+            else : 
+                return sol
+        
+        return sol
+
+
+class Solution:
+    def lowestCommonAncestor(
+        self, root: Optional[TreeNode], p: Optional[TreeNode], q: Optional[TreeNode]
+    ) -> Optional[TreeNode]:
+        
+        big_node = p if p.val > q.val else q 
+        small_node = p if p.val < q.val else q
+        
+        def _dfs(node : Optional[TreeNode]) : 
+            if small_node.val <= node.val <= big_node.val : 
+                return node
+
+            if node.val >= big_node.val : 
+                return _dfs(node.left) 
+            else : 
+                return _dfs(node.right) 
+        
+        return _dfs(root)
+        
+
+
 
 
 def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:
