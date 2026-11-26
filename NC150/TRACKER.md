@@ -146,7 +146,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `BalancedBinaryTree_110` | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | 🟩 Easy | `easy/Balanced Binary Tree.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `SameTree_100` | [Same Tree](https://leetcode.com/problems/same-tree/) | 🟩 Easy | `easy/Same Tree.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | — | `SubtreeOfAnotherTree_572` | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | 🟩 Easy | `easy/Subtree of Another Tree.py`📝 | ☑ | ☐ | ☐ | ☐ |
-| — | `LowestCommonAncestorOfABinarySearchTree_235` | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | 🟨 Med | `medium/Lowest Common Ancestor of a Binary Search Tree.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `LowestCommonAncestorOfABinarySearchTree_235` | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | 🟨 Med | `medium/Lowest Common Ancestor of a Binary Search Tree.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `BinaryTreeLevelOrderTraversal_102` | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | 🟨 Med | `medium/Binary Tree Level Order Traversal.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | — | `BinaryTreeRightSideView_199` | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | 🟨 Med | `medium/Binary Tree Right Side View.py` +1 | ☑ | ☐ | ☐ | ☑ |
 | — | `CountGoodNodesInBinaryTree_1448` | [Count Good Nodes In Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | 🟨 Med | `medium/Count Good Nodes in Binary Tree.py`📝 | ☑ | ☐ | ☐ | ☑ |
@@ -225,10 +225,10 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | P1 | `NetworkDelayTime_743` | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | 🟨 Med | — | ☑ | ☐ | ☐ | ☑ |
 | — | `ReconstructItinerary_332` | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
-| — | `MinCostToConnectAllPoints_1584` | [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/) | 🟨 Med | `medium/Min Cost to Connect All Points.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `MinCostToConnectAllPoints_1584` | [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/) | 🟨 Med | `medium/Min Cost to Connect All Points.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `SwimInRisingWater_778` | [Swim In Rising Water](https://leetcode.com/problems/swim-in-rising-water/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
 | — | `AlienDictionary_269` | [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) | 🟥 Hard | — | ☐ | ☐ | ☐ | ☐ |
-| — | `CheapestFlightsWithinKStops_787` | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | 🟨 Med | `medium/Cheapest Flights Within K Stops.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `CheapestFlightsWithinKStops_787` | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | 🟨 Med | `medium/Cheapest Flights Within K Stops.py`📝 | ☑ | ☐ | ☐ | ☐ |
 
 ## 13. 1-D Dynamic Programming · 12 題 · W6
 
@@ -275,9 +275,9 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 |:-:|---|---|:-:|---|:-:|:-:|:-:|:-:|
 | **P0** | `MaximumSubarray_53` | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | 🟨 Med | `medium/Maximum Subarray.py`📝 +2 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `JumpGame_55` | [Jump Game](https://leetcode.com/problems/jump-game/) | 🟨 Med | `medium/Jump_Game.py` +2 | ☑ | ☐ | ☐ | ☑ |
-| — | `JumpGameII_45` | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | 🟨 Med | `TOP150Review/Jump Game II.py` | ☐ | ☐ | ☐ | ☐ |
+| — | `JumpGameII_45` | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | 🟨 Med | `TOP150Review/Jump Game II.py` | ☑ | ☐ | ☐ | ☐ |
 | P1 | `GasStation_134` | [Gas Station](https://leetcode.com/problems/gas-station/) | 🟨 Med | `medium/Gas Station.py`📝 | ☑ | ☐ | ☐ | ☑ |
-| — | `HandOfStraights_846` | [Hand of Straights](https://leetcode.com/problems/hand-of-straights/) | 🟨 Med | `medium/Hand of Straights.py` | ☐ | ☐ | ☐ | ☐ |
+| — | `HandOfStraights_846` | [Hand of Straights](https://leetcode.com/problems/hand-of-straights/) | 🟨 Med | `medium/Hand of Straights.py` | ☑ | ☐ | ☐ | ☐ |
 | — | `MergeTripletsToFormTargetTriplet_1899` | [Merge Triplets to Form Target Triplet](https://leetcode.com/problems/merge-triplets-to-form-target-triplet/) | 🟨 Med | `medium/Merge Triplets to Form Target Triplet.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `PartitionLabels_763` | [Partition Labels](https://leetcode.com/problems/partition-labels/) | 🟨 Med | `medium/Partition Labels.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | — | `ValidParenthesisString_678` | [Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string/) | 🟨 Med | `medium/Valid Parenthesis String.py`📝 | ☐ | ☐ | ☐ | ☐ |
