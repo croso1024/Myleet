@@ -242,7 +242,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `HouseRobberII_213` | [House Robber II](https://leetcode.com/problems/house-robber-ii/) | 🟨 Med | `medium/House Robber II.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `LongestPalindromicSubstring_5` | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | 🟨 Med | `medium/Longest Palindromic Substring.js`📝 +5 | ☑ | ☐ | ☐ | ☑ |
 | — | `PalindromicSubstrings_647` | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | 🟨 Med | `medium/Palindromic Substrings.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
-| — | `DecodeWays_91` | [Decode Ways](https://leetcode.com/problems/decode-ways/) | 🟨 Med | `medium/Decode Ways.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `DecodeWays_91` | [Decode Ways](https://leetcode.com/problems/decode-ways/) | 🟨 Med | `medium/Decode Ways.py`📝 | ☑ | ☐ | ☐ | ☑ |
 | **P0** | `CoinChange_322` | [Coin Change](https://leetcode.com/problems/coin-change/) | 🟨 Med | `medium/CoinChange.py` +3 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `MaximumProductSubarray_152` | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | 🟨 Med | `medium/Maximum Product Subarray.py`📝 +1 | ☑ | ☐ | ☐ | ☑ |
 | P1 | `WordBreak_139` | [Word Break](https://leetcode.com/problems/word-break/) | 🟨 Med | `medium/Word Break.js`📝 +1 | ☑ | ☐ | ☐ | ☐ |
@@ -280,7 +280,7 @@ NC150/01_Arrays_and_Hashing/TwoSum_1.ts
 | — | `HandOfStraights_846` | [Hand of Straights](https://leetcode.com/problems/hand-of-straights/) | 🟨 Med | `medium/Hand of Straights.py` | ☑ | ☐ | ☐ | ☐ |
 | — | `MergeTripletsToFormTargetTriplet_1899` | [Merge Triplets to Form Target Triplet](https://leetcode.com/problems/merge-triplets-to-form-target-triplet/) | 🟨 Med | `medium/Merge Triplets to Form Target Triplet.py`📝 | ☐ | ☐ | ☐ | ☐ |
 | P1 | `PartitionLabels_763` | [Partition Labels](https://leetcode.com/problems/partition-labels/) | 🟨 Med | `medium/Partition Labels.py`📝 | ☑ | ☐ | ☐ | ☑ |
-| — | `ValidParenthesisString_678` | [Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string/) | 🟨 Med | `medium/Valid Parenthesis String.py`📝 | ☐ | ☐ | ☐ | ☐ |
+| — | `ValidParenthesisString_678` | [Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string/) | 🟨 Med | `medium/Valid Parenthesis String.py`📝 | ☑ | ☐ | ☐ | ☑ |
 
 ## 16. Intervals · 6 題 · W7
 
